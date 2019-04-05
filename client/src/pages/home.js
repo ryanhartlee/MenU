@@ -6,7 +6,6 @@ import { Container, Row, Col, Jumbotron } from 'reactstrap';
 import starbucks from '../images/starbucks-logo.png'
 import dutch from '../images/dutch-bros-logo.png'
 import sonic from '../images/sonic-logo.png'
-import logo from '../images/MenULogo.png'
 
 class Home extends Component {
     render() {
@@ -19,10 +18,10 @@ class Home extends Component {
                  <LogoCard logo={starbucks} restaurant="/starbucks" />
                  </Col>
                  <Col sm="4" >
-                 <LogoCard logo={dutch} restaurant="dutchbros" />
+                 <LogoCard logo={dutch} restaurant="/dutchbros" />
                  </Col>
                  <Col sm="4" >
-                 <LogoCard logo={sonic} restaurant="sonic" />
+                 <LogoCard logo={sonic} restaurant="/sonic" />
                  </Col>
                 </Row>
                 </Container>
