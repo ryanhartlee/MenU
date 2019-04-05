@@ -37,11 +37,11 @@ export default class NavbarZ extends React.Component {
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
           <div className="logoImage">
-          <img src={logo}></img>
+          <a href="/"><img src={logo}></img></a>
           </div>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Post Recipe</NavLink>
+                <NavLink href="#">Post Recipe</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
@@ -49,10 +49,13 @@ export default class NavbarZ extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    Starbucks
+                  <a href="/starbucks">Starbucks</a>
                   </DropdownItem>
                   <DropdownItem>
-                    Dutch Bros
+                    <a href="/dutchbros">Dutch Bros</a>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <a href="/sonic">Sonic</a>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
