@@ -6,7 +6,7 @@ export default class SignUpForm extends React.Component {
     return (
       <Form>
         <FormGroup>
-          <Label for="name">Email</Label>
+          <Label for="name">Name</Label>
           <Input type="name" name="name" id="userName" placeholder="name" />
         </FormGroup>
         <FormGroup>
