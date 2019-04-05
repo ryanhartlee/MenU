@@ -1,0 +1,9 @@
+.StarbucksCard {
+    margin: 10%;
+    padding: 20px;
+    float: left;
+} 
+
+.StarbucksCard:hover {
+    opacity: .5;
+}
