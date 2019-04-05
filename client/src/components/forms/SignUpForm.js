@@ -18,7 +18,7 @@ export default class SignUpForm extends React.Component {
           <Input type="password" name="password" id="userPassword" placeholder="password" />
         </FormGroup>
         <FormGroup>
-          <Label for="confPassword">Password</Label>
+          <Label for="confPassword">Confirm Password</Label>
           <Input type="confpassword" name="confpassword" id="userConfPassword" placeholder="confim password" />
         </FormGroup>
         <Button>Submit</Button>
