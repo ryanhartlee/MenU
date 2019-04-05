@@ -11,7 +11,8 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
-import SignInModal from './Modals';
+import SignInModal from './Modals/SignInModal';
+import SignUpModal from './Modals/SignUpModal';
 
 export default class NavbarZ extends React.Component {
   constructor(props) {
@@ -31,7 +32,7 @@ export default class NavbarZ extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">MenYou</NavbarBrand>
+          <NavbarBrand href="/">MenU</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -57,6 +58,9 @@ export default class NavbarZ extends React.Component {
               </UncontrolledDropdown>
               <NavItem>
               <SignInModal />
+              </NavItem>
+              <NavItem>
+              <SignUpModal />
               </NavItem>
             </Nav>
           </Collapse>
