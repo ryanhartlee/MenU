@@ -12,21 +12,20 @@ class Home extends Component {
       return (
         <div>
             <NavbarZ />
-            <Container >
-                <Row>
-                <Col sm="4" > 
-                 <LogoCard logo={starbucks} restaurant="/starbucks" />
-                 </Col>
-                 <Col sm="4" >
-                 <LogoCard logo={dutch} restaurant="/dutchbros" />
-                 </Col>
-                 <Col sm="4" >
-                 <LogoCard logo={sonic} restaurant="/sonic" />
-                 </Col>
-                </Row>
-                </Container>
-            </div>
-        
+              <div className="container">
+                <div className="row">
+                  <div className="col-sm">
+                    <LogoCard logo={starbucks} restaurant="/starbucks" />
+                  </div>
+                  <div className="col-sm">
+                    <LogoCard logo={dutch} restaurant="/dutchbros" />
+                   </div>
+                   <div className="col-sm">
+                    <LogoCard logo={sonic} restaurant="/sonic" />
+                 </div>
+                </div>
+              </div>
+        </div>
 
       );
     }

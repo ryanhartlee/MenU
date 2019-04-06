@@ -21,7 +21,7 @@ class SignUpModal extends React.Component {
   render() {
     return (
       <div>
-        <Button onClick={this.toggle}>Sign Up</Button>
+        <button className="btn" onClick={this.toggle}>Not a user? Sign Up</button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Sign Up</ModalHeader>
           <ModalBody>
