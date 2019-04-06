@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Button } from 'reactstrap';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import NavbarZ from '../components/navbar/navbar';
 import LogoCard from '../components/logoCard/LogoCard';
 
@@ -9,6 +8,9 @@ import { Container, Row, Col } from 'reactstrap';
 import StarbucksCard from '../components/starbucksCard/StarbucksCard';
 import starbucks from "../starbucks.json";
 
+
+
+import DrinkCard from '../components/drinkCard/drinkCard';
 
 class Starbucks extends Component {
 
