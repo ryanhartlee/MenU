@@ -4,7 +4,7 @@ import '../components/logoCard/LogoCard.css'
 import DrinkCard from '../components/drinkCard/drinkCard';
 
 
-class DutchBros extends Component {
+class Sonic extends Component {
     render() {
       return (
         <div>
@@ -18,4 +18,4 @@ class DutchBros extends Component {
     }
   }
   
-  export default DutchBros;
+  export default Sonic;
