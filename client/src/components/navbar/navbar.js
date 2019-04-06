@@ -11,8 +11,10 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
-import SignInModal from './Modals/SignInModal';
-import SignUpModal from './Modals/SignUpModal';
+import SignInModal from '../Modals/SignInModal';
+import SignUpModal from '../Modals/SignUpModal';
+import logo from '../../images/MenULogo.png'
+import './navbar.css';
 
 export default class NavbarZ extends React.Component {
   constructor(props) {
@@ -32,12 +34,14 @@ export default class NavbarZ extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">MenU</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
+          <div className="logoImage">
+          <a href="/"><img src={logo}></img></a>
+          </div>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Post Recipe</NavLink>
+                <NavLink href="#">Post Recipe</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
@@ -45,10 +49,13 @@ export default class NavbarZ extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    Starbucks
+                  <a href="/starbucks">Starbucks</a>
                   </DropdownItem>
                   <DropdownItem>
-                    Dutch Bros
+                    <a href="/dutchbros">Dutch Bros</a>
+                  </DropdownItem>
+                  <DropdownItem>
+                    <a href="/sonic">Sonic</a>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
