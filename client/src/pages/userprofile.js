@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import NavbarZ from '../components/navbar/navbar';
-import '../components/logoCard/LogoCard.css'
-import { Container, Row, Col, Jumbotron } from 'reactstrap';
-import UserJumbotron from '../components/user-components/profileJumbotron'
-import UserTabs from '../components/user-components/pageTabs'
+import '../components/logoCard/LogoCard.css';
+import UserJumbotron from '../components/user-components/profileJumbotron';
+import UserTabs from '../components/user-components/pageTabs';
 import '../components/user-components/userprofile.css';
 
 

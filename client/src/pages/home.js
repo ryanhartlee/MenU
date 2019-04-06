@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import NavbarZ from '../components/navbar/navbar';
 import LogoCard from '../components/logoCard/LogoCard';
 import '../components/logoCard/LogoCard.css'
-import { Container, Row, Col, Jumbotron } from 'reactstrap';
 import starbucks from '../images/starbucks-logo.png'
 import dutch from '../images/dutch-bros-logo.png'
 import sonic from '../images/sonic-logo.png'
@@ -26,7 +25,6 @@ class Home extends Component {
                 </div>
               </div>
         </div>
-
       );
     }
   }

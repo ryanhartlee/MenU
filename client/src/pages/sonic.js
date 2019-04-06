@@ -1,21 +1,21 @@
 import React, { Component } from 'react';
 import NavbarZ from '../components/navbar/navbar';
 import '../components/logoCard/LogoCard.css'
-import { Container, Row, Col } from 'reactstrap';
 import DrinkCard from '../components/drinkCard/drinkCard';
 
-class Starbucks extends Component {
+
+class Sonic extends Component {
     render() {
       return (
         <div>
             <NavbarZ />
             <br />
-            <Container >
+            <div className="container">
                     <DrinkCard drinkName="Example Name" drinkInfo="Example info" drinkFlavor="Example flavors,Example flavors,Example flavors"/>
-                </Container>
+                </div>
             </div>
       );
     }
   }
   
-  export default Starbucks;
+  export default Sonic;
