@@ -52,15 +52,15 @@ export default class NavbarZ extends React.Component {
                   Restaurants
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>
-                  <a href="/starbucks">Starbucks</a>
-                  </DropdownItem>
-                  <DropdownItem>
-                    <a href="/dutchbros">Dutch Bros</a>
-                  </DropdownItem>
-                  <DropdownItem>
-                    <a href="/sonic">Sonic</a>
-                  </DropdownItem>
+                <a href="/starbucks"><DropdownItem>
+                    Starbucks
+                  </DropdownItem></a>
+                  <a href="/dutchbros"><DropdownItem>
+                    Dutch Bros
+                  </DropdownItem></a>
+                  <a href="/sonic"><DropdownItem>
+                      Sonic
+                    </DropdownItem></a>
                   <DropdownItem divider />
                   <DropdownItem>
                     More on the way!

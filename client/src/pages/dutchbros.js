@@ -4,7 +4,8 @@ import '../components/logoCard/LogoCard.css'
 import { Container, Row, Col } from 'reactstrap';
 import DrinkCard from '../components/drinkCard/drinkCard';
 
-class Starbucks extends Component {
+
+class DutchBros extends Component {
     render() {
       return (
         <div>
@@ -18,4 +19,4 @@ class Starbucks extends Component {
     }
   }
   
-  export default Starbucks;
+  export default DutchBros;
