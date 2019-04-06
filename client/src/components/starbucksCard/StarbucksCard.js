@@ -1,17 +1,45 @@
 import React from 'react';
-import { Card, CardImg } from 'reactstrap';
+import { Card, CardImg, Row } from 'reactstrap';
 import "./StarbucksCard.css"
 
 
-const StarbucksCard = (props) => {
+const StarbucksCard = props => {
+  console.log(props)
   return (
-    <div> 
-        <Card className="StarbucksCard">
-            <a href={props.starbucks}>
-                <CardImg className="StarbucksCardImage" top width="100%" src={props.logo} alt="Card image cap" />
-             </a>
-        </Card>
-    </div>
+
+    <Card className="StarbucksCard">
+      <div className="img-container">
+        <img alt={props.name} src={props.image} />
+      </div>
+      <div className="content">
+        <ul>
+          <Row>
+            <strong>Name:</strong> {props.name}
+          </Row>
+          <Row>
+            <strong>Description</strong> {props.description}
+          </Row>
+
+          <Row>
+            <strong>Recipe</strong>
+          </Row>
+          <Row>
+
+            <ul>
+              {props.recipe.map((ing) =>
+
+                <li>
+                  {ing}
+                </li>
+
+              )}
+            </ul>
+          </Row>
+        </ul>
+      </div>
+    </Card>
+
+
   );
 };
 
