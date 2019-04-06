@@ -10,8 +10,8 @@ class Home extends Component {
     constructor(props, context) {
         super(props, context);
         this.state = {
-            userName: 'Test User',
-            userPic: 'https://forwardsummit.ca/wp-content/uploads/2019/01/avatar-default.png'
+            userName: 'Shrek',
+            userPic: 'https://pbs.twimg.com/profile_images/806269452/shrekav_400x400.png'
 
         }
     }
