@@ -9,7 +9,7 @@ const StarbucksCard = props => {
 
     <Card className="StarbucksCard">
       <div className="img-container">
-        <img alt={props.name} src={props.image} />
+        <img className="starbPic" alt={props.name} src={props.image} />
       </div>
       <div className="content">
         <ul>
