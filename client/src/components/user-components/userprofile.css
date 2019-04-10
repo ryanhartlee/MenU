@@ -1,0 +1,19 @@
+.UserCardImage {
+    max-width: 160px;
+    max-height: 160px;
+    float: left;
+    margin-right: 5vh;
+    text-align: center
+}
+
+.DrinkCardImage {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.drinkCard {
+    width: 33%;
+    float: left;
+}
+
+
