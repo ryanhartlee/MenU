@@ -4,8 +4,10 @@
         "id": 1,
         "name": "Purple Drink",
         "image": "./images/Pink-Purple-Drink.jpg",
-        "description": "",
-        "recipe": ["1", "2", "3"]
+        "description": "Ombre Drink",
+        "recipe": ["1 part Pink Drink (Strawberry Acai Refresher with coconut milk)", "1 part Purple Drink (Passion Iced Tea with soy , vanilla syrup & blackberries)"]
+
+ 
         
     
     },
@@ -13,22 +15,29 @@
         "id": 2,
         "name": "Cotton Candy Drink",
         "image": "./images/Cottoncandy.jpg",
-        "description": "",
-        "recipe": ["1", "2", "3"]
+        "description": "Yummy, non caffeinated frap that tastes like cotton candy.",
+        "recipe": ["Vanilla Bean Frappuccino", "Add Raspberry Syrup (1 pump tall, 1.5 pumps grande, 2 pumps venti)"]
     },
     {
         "id": 3,
         "name": "Skittles Frappucino",
         "image": "./images/SkittlesFrap.jpg",
-        "description": "",
-        "recipe": ["1", "2", "3"]
+        "description": "It’s fun and fruity just like its candy counterpart!",
+        "recipe": ["Strawberries and Crème Frappuccino", "No classic syrup", "Add Vanilla Syrup (2 pumps tall, 3 pumps grande, 4 pumps venti)", "Add Raspberry Syrup (½ pump tall, 1 pump grande, 1.5 pumps venti)"]
     },
     {
         "id": 4,
         "name": "Juniper Lemonade",
         "image": "./images/JuniperLemon.jpg",
         "description": "Hint of juniper and sage, an evergreen aroma and citrus notes",
-        "recipe": ["1", "2", "3"]
+        "recipe": ["Lemonade", "Add juniper syrup (2 pumps tall, 3 grande, 4 venti)", "Add classic syrup (1 pump tall, 2 grande, 3 venti)"]
+    },
+    {
+        "id": 5,
+        "name": "Caramel Snickerdoodle Macchiato",
+        "image": "./images/Snickerdoodle.jpg",
+        "description": "It’s sweet but not too sweet and has a delicious blend of caramel, cinnamon and a bit of vanilla",
+        "recipe": ["Iced Soy Caramel Macchiato, upside down", "Add Vanilla Syrup (1 pump tall, 1.5 pumps grande, 2 pumps venti)", "Add Cinnamon Dolce Syrup (1 pump tall, 1.5 pumps grande, 2 pumps venti)"]
     }
 
 ]
