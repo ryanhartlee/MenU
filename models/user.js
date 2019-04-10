@@ -1,32 +1,24 @@
 const mongoose = require("mongoose");
-
 const Schema = mongoose.Schema;
+const passportLocalMongoose = require('passport-local-mongoose');
 
+//Creating a userSchema for our database
 const userSchema = new Schema({
-  firstName: {
-    type: String,
-    trim: true,
-    required: true
-  },
-
-  email: {
-    type: String,
-    match: [/.+@.+\..+/, "Please enter a valid e-mail address"],
-    required: true
-  },
-
-  password: { 
-    type: String, 
-    trim: true, 
-    required: true 
-  },
-
-  date: { 
-    type: Date, 
-    default: Date.now 
-  }
-
+    first_name: {
+        type: String,
+        required: true
+    },
+    email: {
+        type: String,
+        unique: true,
+        match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
+    },
+    listings: [{
+        type: Schema.Types.ObjectId, ref: 'Listing'
+    }],
 });
+
+userSchema.plugin(passportLocalMongoose);
 
 const User = mongoose.model("User", userSchema);
 
