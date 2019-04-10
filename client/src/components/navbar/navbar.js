@@ -11,8 +11,9 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem } from 'reactstrap';
-import SignInModal from './Modals/SignInModal';
-import SignUpModal from './Modals/SignUpModal';
+import SignInModal from '../Modals/SignInModal';
+import logo from '../../images/MenULogo.png'
+import './navbar.css';
 
 export default class NavbarZ extends React.Component {
   constructor(props) {
@@ -32,24 +33,34 @@ export default class NavbarZ extends React.Component {
     return (
       <div>
         <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">MenU</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
+          <NavbarBrand>
+           <div className="logoImage">
+           <a href="/"><img src={logo}></img></a>
+           </div>
+          </NavbarBrand>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">Post Recipe</NavLink>
+                <NavLink href="#">Post Recipe</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/user">Profile</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Restaurants
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>
+                <a href="/starbucks"><DropdownItem>
                     Starbucks
-                  </DropdownItem>
-                  <DropdownItem>
+                  </DropdownItem></a>
+                  <a href="/dutchbros"><DropdownItem>
                     Dutch Bros
-                  </DropdownItem>
+                  </DropdownItem></a>
+                  <a href="/sonic"><DropdownItem>
+                      Sonic
+                    </DropdownItem></a>
                   <DropdownItem divider />
                   <DropdownItem>
                     More on the way!
@@ -57,10 +68,7 @@ export default class NavbarZ extends React.Component {
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
-              <SignInModal />
-              </NavItem>
-              <NavItem>
-              <SignUpModal />
+                <SignInModal />
               </NavItem>
             </Nav>
           </Collapse>
