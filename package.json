@@ -24,24 +24,33 @@
   "homepage": "https://github.com/ryanhartlee/DrinkMaker#readme",
   "devDependencies": {
     "concurrently": "^4.1.0",
-    "nodemon": "^1.18.7"
+    "nodemon": "^1.18.11"
   },
   "dependencies": {
     "@restart/context": "2.1.2",
     "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.5.4",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.3.1",
     "express": "^4.16.4",
+    "express-router-methods": "^1.0.3",
     "express-session": "^1.15.6",
     "if-env": "^1.0.4",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.4.22",
+    "moongoose": "0.0.5",
+    "morgan": "^1.9.1",
     "mysql": "^2.16.0",
     "mysql2": "^1.6.5",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^5.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
     "reactstrap": "^8.0.0",
     "sequelize": "^5.2.12"
+    "react-tabs": "^3.0.0",
+    "reactstrap": "^8.0.0"
   }
 }

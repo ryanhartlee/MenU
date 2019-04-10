@@ -1,0 +1,34 @@
+[
+    {
+    
+        "id": 1,
+        "name": "Purple Drink",
+        "image": "./images/Pink-Purple-Drink.jpg",
+        "description": "",
+        "recipe": ["1", "2", "3"]
+        
+    
+    },
+    {
+        "id": 2,
+        "name": "Cotton Candy Drink",
+        "image": "./images/Cottoncandy.jpg",
+        "description": "",
+        "recipe": ["1", "2", "3"]
+    },
+    {
+        "id": 3,
+        "name": "Skittles Frappucino",
+        "image": "./images/SkittlesFrap.jpg",
+        "description": "",
+        "recipe": ["1", "2", "3"]
+    },
+    {
+        "id": 4,
+        "name": "Juniper Lemonade",
+        "image": "./images/JuniperLemon.jpg",
+        "description": "Hint of juniper and sage, an evergreen aroma and citrus notes",
+        "recipe": ["1", "2", "3"]
+    }
+
+]
