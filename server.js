@@ -1,16 +1,43 @@
 // ---DEPENDENCIES---
 const express = require('express');
-const path = require("path");
-const PORT = process.env.PORT || 3001;
+const bodyParser = require('body-parser');
+const mongoose = require("mongoose");
+const db = require('./models');
+const routes = require("./routes");
 const app = express();
+const PORT = process.env.PORT || 3001;
+const passport = require('passport')
+const LocalStrategy = require('passport-local').Strategy;
 
-// Define middleware here
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-// Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
+const validPassword = (userPassword, password) => {
+  return userPassword === password;
 }
+
+// Configure body parser for AJAX requests
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(bodyParser.json());
+app.use(session({keys: ['secretkey1', 'secretkey2', '...']}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+passport.use(new LocalStrategy(db.User.authenticate()));
+
+passport.serializeUser(db.User.serializeUser());
+passport.deserializeUser(db.User.deserializeUser());
+
+// Serve up static assets
+app.use(express.static("client/build"));
+
+
+app.use(routes);
+// // Add routes, both API and view
+// app.use(routes);
+mongoose.Promise = Promise;
+mongoose.connect('mongodb://localhost:27017/menudb', {useNewUrlParser: true});
+// mongoose.connect("mongodb:heroku CONNECT ONCE DEPLOYED")
 
 // ---MODELS---
 // (Require models here)
