@@ -12,6 +12,7 @@ import {
   DropdownMenu,
   DropdownItem } from 'reactstrap';
 import SignInModal from '../Modals/SignInModal';
+import CreateDrinkModal from '../Modals/CreateDrinkModal';
 import logo from '../../images/MenULogo.png'
 import './navbar.css';
 
@@ -42,7 +43,7 @@ export default class NavbarZ extends React.Component {
           </NavbarBrand>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="#">Post Recipe</NavLink>
+                <CreateDrinkModal />
               </NavItem>
               <NavItem>
                 <NavLink href="/user">Profile</NavLink>

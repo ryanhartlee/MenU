@@ -6,22 +6,24 @@ import "./StarbucksCard.css"
 const StarbucksCard = props => {
   console.log(props)
   return (
-
+<div>
     <Card className="StarbucksCard">
-      <div className="img-container">
-        <img alt={props.name} src={props.image} />
-      </div>
-      <div className="content">
+      {/* <div className="img-container"> */}
+        <img className="starbPic" alt={props.name} src={props.image} />
+      {/* </div> */}
+      <div className="container">
+      <style>{'body { background-color: #174; }'}</style>
+            
         <ul>
           <Row>
             <strong>Name:</strong> {props.name}
           </Row>
           <Row>
-            <strong>Description</strong> {props.description}
+            <strong>Description:</strong> {props.description}
           </Row>
 
           <Row>
-            <strong>Recipe</strong>
+            <strong>Recipe:</strong>
           </Row>
           <Row>
 
@@ -38,6 +40,7 @@ const StarbucksCard = props => {
         </ul>
       </div>
     </Card>
+    </div>
 
 
   );
