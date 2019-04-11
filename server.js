@@ -62,6 +62,12 @@ mongoose.connect('mongodb://localhost:27017/menudb', {useNewUrlParser: true});
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "./client/build/index.html"));
   });
+
+  db.sequelize.sync().then(function() {
+    app.listen(PORT, function() {
+      console.log("==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.", PORT, PORT);
+    });
+  });
   
   app.listen(PORT, () => {
     console.log(`🌎 ==> API server now on port ${PORT}!`);

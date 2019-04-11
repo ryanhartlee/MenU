@@ -25,5 +25,5 @@ router
     res.json({user: req.user})
   });
 
-
 module.exports = router;
+
