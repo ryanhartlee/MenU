@@ -30,11 +30,6 @@
     "@restart/context": "2.1.2",
     "axios": "^0.18.0",
     "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.18.3",
-    "bootstrap": "^4.3.1",
-    "express": "^4.16.4",
-    "express-session": "^1.15.6",
-    "if-env": "^1.0.4",
     "bluebird": "^3.5.4",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.3.1",
@@ -56,9 +51,6 @@
     "react-router-dom": "^5.0.0",
     "react-tabs": "^3.0.0",
     "reactstrap": "^8.0.0",
-    "sequelize": "^5.2.12",
-    "react-tabs": "^3.0.0",
-    "reactstrap": "^8.0.0"
-
+    "sequelize": "^5.2.12"
   }
 }
