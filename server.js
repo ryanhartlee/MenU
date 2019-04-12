@@ -6,8 +6,9 @@ const db = require('./models');
 // const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3001;
-const passport = require('passport')
-const LocalStrategy = require('passport-local').Strategy;
+// const passport = require('passport')
+// const LocalStrategy = require('passport-local').Strategy;
+const passport = require('./config/passport')
 
 const validPassword = (userPassword, password) => {
   return userPassword === password;
@@ -23,10 +24,10 @@ app.use(bodyParser.json());
 app.use(passport.initialize());
 app.use(passport.session());
 
-passport.use(new LocalStrategy(db.User.authenticate()));
+// passport.use(new LocalStrategy(db.User.authenticate()));
 
-passport.serializeUser(db.User.serializeUser());
-passport.deserializeUser(db.User.deserializeUser());
+// passport.serializeUser(db.User.serializeUser());
+// passport.deserializeUser(db.User.deserializeUser());
 
 // Serve up static assets
 app.use(express.static("client/build"));
