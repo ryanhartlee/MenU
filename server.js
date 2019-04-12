@@ -63,8 +63,12 @@ app.post("/starbucks/drinks/", function (req,res) {
 // // Add routes, both API and view
 // app.use(routes);
 mongoose.Promise = Promise;
-mongoose.connect('mongodb://localhost:27017/menudb', {useNewUrlParser: true});
+// mongoose.connect('mongodb://localhost:27017/menudb', {useNewUrlParser: true});
 // mongoose.connect("mongodb:heroku CONNECT ONCE DEPLOYED")
+
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/menudb";
+
+mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 
 // ---MODELS---
 // (Require models here)
