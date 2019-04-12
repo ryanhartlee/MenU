@@ -25,10 +25,16 @@ class SignUpModal extends React.Component {
 
   createUser = event => {
     console.log(this.state);
+    if (this.state.password === this.state.confpassword) {
     this.toggle();
-    axios.post('/signup/post', this.state).then(res => {
+    axios.post('/signup/post', {
+      name: this.state.name,
+      email: this.state.email,
+      password: this.state.password
+    }).then(res => {
       console.log(res)
     })
+  } else {alert("Passwords must match")}
   };
 
   handleInputChange = event => {
