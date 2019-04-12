@@ -1,17 +1,17 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
-import SignUpForm from '../forms/SignUpForm';
+import CreateDrinkForm from '../forms/CreateDrinkForm';
 import axios from 'axios';
 
-class SignUpModal extends React.Component {
+class CreateDrinkModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       modal: false,
+      restaurant: "",
       name: "",
-      email: "",
-      password: "",
-      confpassword: ""
+      description: "",
+      recipe: []
     };
 
     this.toggle = this.toggle.bind(this);
@@ -23,9 +23,9 @@ class SignUpModal extends React.Component {
     }));
   }
 
-  createUser = event => {
+  createDrink = event => {
     console.log(this.state);
-    axios.post('/', this.state).then(res => {
+    axios.post('/starbucks/drinks/', this.state).then(res => {
       console.log(res)
     })
   };
@@ -40,11 +40,11 @@ class SignUpModal extends React.Component {
   render() {
     return (
       <div>
-        <button className="btn" onClick={this.toggle}>Not a user? Sign Up</button>
+        <button className="btn" onClick={this.toggle}>Create A Drink!</button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
-          <ModalHeader toggle={this.toggle}>Sign Up</ModalHeader>
+          <ModalHeader toggle={this.toggle}>Post Drink</ModalHeader>
           <ModalBody>
-            <SignUpForm handleFormSubmit={this.createUser} handleInputChange={this.handleInputChange} />
+            <CreateDrinkForm handleFormSubmit={this.createDrink} handleInputChange={this.handleInputChange} />
           </ModalBody>
         </Modal>
       </div>
@@ -54,4 +54,4 @@ class SignUpModal extends React.Component {
 
 
 
-export default SignUpModal;
+export default CreateDrinkModal;
