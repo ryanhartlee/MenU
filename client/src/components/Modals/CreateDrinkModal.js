@@ -40,7 +40,7 @@ class CreateDrinkModal extends React.Component {
   render() {
     return (
       <div>
-        <button className="btn" onClick={this.toggle}>Create A Drink!</button>
+        <Button onClick={this.toggle}>Create A Drink!</Button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Post Drink</ModalHeader>
           <ModalBody>

@@ -25,7 +25,8 @@ class SignUpModal extends React.Component {
 
   createUser = event => {
     console.log(this.state);
-    axios.post('/', this.state).then(res => {
+    this.toggle();
+    axios.post('/signup/post', this.state).then(res => {
       console.log(res)
     })
   };

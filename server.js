@@ -32,10 +32,25 @@ passport.deserializeUser(db.User.deserializeUser());
 app.use(express.static("client/build"));
 
 // MOVE THIS TO CONTROLLER LATER
-app.post("/", function (req,res) {
+app.post("/signup/post", function (req,res) {
   console.log(req.body);
   db.User
     .create(req.body);
+});
+
+app.post('/login',
+  passport.authenticate('local'),
+  function(req, res) {
+    // If this function gets called, authentication was successful.
+    // `req.user` contains the authenticated user.
+    // res.redirect('/user/' + req.user.username);
+    res.json('/userprofile');
+
+  });
+
+app.get('/logout', function(req, res) {
+  req.logout();
+  res.redirect('/');
 });
 
 app.post("/starbucks/drinks/", function (req,res) {
