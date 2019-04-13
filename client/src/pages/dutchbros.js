@@ -11,6 +11,7 @@ class DutchBros extends Component {
             <NavbarZ />
             <br />
             <div className="container">
+            <style>{'body { background-color: #06a; }'}</style>
                     <DrinkCard drinkName="Example Name" drinkInfo="Example info" drinkFlavor="Example flavors,Example flavors,Example flavors"/>
                 </div>
             </div>

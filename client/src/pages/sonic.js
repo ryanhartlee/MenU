@@ -11,6 +11,7 @@ class Sonic extends Component {
             <NavbarZ />
             <br />
             <div className="container">
+            <style>{'body { background-color: #e33; }'}</style>
                     <DrinkCard drinkName="Example Name" drinkInfo="Example info" drinkFlavor="Example flavors,Example flavors,Example flavors"/>
                 </div>
             </div>
