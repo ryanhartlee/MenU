@@ -13,6 +13,10 @@ const userSchema = new Schema({
         unique: true,
         match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
     },
+    password: {
+        type: String,
+        required: true
+    },
     listings: [{
         type: Schema.Types.ObjectId, ref: 'Listing'
     }],
