@@ -1,13 +1,16 @@
 import React from 'react';
-import { Button, Modal, ModalHeader, ModalBody} from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import SignInForm from '../forms/SignInForm';
 import SignUpModal from './SignUpModal';
+import axios from 'axios';
 
 class SignInModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      modal: false
+      modal: false,
+      email: "",
+      password: ""
     };
 
     this.toggle = this.toggle.bind(this);
@@ -19,6 +22,27 @@ class SignInModal extends React.Component {
     }));
   }
 
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    })
+    console.log(this.state)
+  };
+
+  loginUser = event => {
+    console.log(this.state.email + "User login");
+    axios.post('/login', {
+      email: this.state.email,
+      password: this.state.password
+    }).then(function () {
+      console.log("login successfull");
+    })
+    // .catch(function (err) {
+    //   alert("Invalid Username Or Password");
+    // });
+  };
+
   render() {
     return (
       <div>
@@ -26,10 +50,10 @@ class SignInModal extends React.Component {
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Sign In</ModalHeader>
           <ModalBody>
-            <SignInForm />
+            <SignInForm handleFormSubmit={this.loginUser} handleInputChange={this.handleInputChange} />
             <br />
             <SignUpModal />
-          </ModalBody>  
+          </ModalBody>
         </Modal>
       </div>
     );

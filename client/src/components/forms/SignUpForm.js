@@ -18,7 +18,7 @@ function SignUpForm (props) {
         </FormGroup>
         <FormGroup>
           <Label for="confPassword">Confirm Password</Label>
-          <Input value={props.confpassword} onChange={props.handleInputChange} type="confpassword" name="confpassword" id="userConfPassword" placeholder="confim password" />
+          <Input value={props.confpassword} onChange={props.handleInputChange} type="password" name="confpassword" id="userConfPassword" placeholder="confim password" />
         </FormGroup>
         <Button onClick={props.handleFormSubmit}>Submit</Button>
       </Form>
