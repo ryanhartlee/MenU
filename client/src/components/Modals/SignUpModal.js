@@ -27,7 +27,7 @@ class SignUpModal extends React.Component {
     console.log(this.state);
     if (this.state.password === this.state.confpassword) {
     this.toggle();
-    axios.post('/signup/post', {
+    axios.post('/api/users/register', {
       name: this.state.name,
       email: this.state.email,
       password: this.state.password

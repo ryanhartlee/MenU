@@ -32,7 +32,7 @@ class SignInModal extends React.Component {
 
   loginUser = event => {
     console.log(this.state.email + "User login");
-    axios.post('/login', {
+    axios.post('api/users/login', {
       email: this.state.email,
       password: this.state.password
     }).then(function () {
