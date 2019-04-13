@@ -7,12 +7,15 @@ import DutchBros from './pages/dutchbros';
 import Sonic from './pages/sonic';
 import UserProfile from './pages/userprofile';
 
+import { Provider } from "react-redux";
+import store from "./store";
+
 
 class App extends Component {
   render() {
     return (
-     <Router>
-      <div>
+      <Provider store={store}> 
+      <Router>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/starbucks" component={Starbucks} />
@@ -20,8 +23,8 @@ class App extends Component {
           <Route exact path="/sonic" component={Sonic} />
           <Route exact path="/user" component={UserProfile} />
         </Switch>
-      </div>
       </Router> 
+      </Provider>
     );
   }
 }
