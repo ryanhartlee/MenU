@@ -10,7 +10,8 @@ class SignInModal extends React.Component {
     this.state = {
       modal: false,
       email: "",
-      password: ""
+      password: "",
+      errors: {}
     };
 
     this.toggle = this.toggle.bind(this);
