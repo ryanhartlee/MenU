@@ -11,12 +11,15 @@ class SignUpModal extends React.Component {
       name: "",
       email: "",
       password: "",
-      confpassword: ""
+      password2: "",
+      errors: {}
     };
 
     this.toggle = this.toggle.bind(this);
   }
+  
 
+  
   toggle() {
     this.setState(prevState => ({
       modal: !prevState.modal
@@ -25,12 +28,13 @@ class SignUpModal extends React.Component {
 
   createUser = event => {
     console.log(this.state);
-    if (this.state.password === this.state.confpassword) {
+    if (this.state.password === this.state.password2) {
     this.toggle();
-    axios.post('/signup/post', {
+    axios.post('/api/users/register', {
       name: this.state.name,
       email: this.state.email,
-      password: this.state.password
+      password: this.state.password,
+      password2: this.state.password2
     }).then(res => {
       console.log(res)
     })

@@ -7,6 +7,15 @@ import dutch from '../images/dutch-bros-logo.png'
 import sonic from '../images/sonic-logo.png'
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isSignedIn: false,
+      signedInUser: ''
+    };
+  }
+
     render() {
       return (
         <div>

@@ -10,7 +10,8 @@ class SignInModal extends React.Component {
     this.state = {
       modal: false,
       email: "",
-      password: ""
+      password: "",
+      errors: {}
     };
 
     this.toggle = this.toggle.bind(this);
@@ -32,12 +33,13 @@ class SignInModal extends React.Component {
 
   loginUser = event => {
     console.log(this.state.email + "User login");
-    axios.post('/login', {
+    axios.post('api/users/login', {
       email: this.state.email,
       password: this.state.password
     }).then(function () {
-      console.log("login successfull");
+      console.log("login successfull"); 
     })
+    this.toggle();
     // .catch(function (err) {
     //   alert("Invalid Username Or Password");
     // });
