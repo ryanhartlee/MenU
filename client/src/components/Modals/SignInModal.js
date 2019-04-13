@@ -37,8 +37,9 @@ class SignInModal extends React.Component {
       email: this.state.email,
       password: this.state.password
     }).then(function () {
-      console.log("login successfull");
+      console.log("login successfull"); 
     })
+    this.toggle();
     // .catch(function (err) {
     //   alert("Invalid Username Or Password");
     // });
