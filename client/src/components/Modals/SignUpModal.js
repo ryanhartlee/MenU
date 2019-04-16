@@ -1,6 +1,6 @@
 import React from 'react';
 // This was in the tutorial from part 1 - not sure why we didn't include it or if we need it. - BG
-// import { Link, withRouter } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import SignUpForm from '../forms/SignUpForm';
 import axios from 'axios';
@@ -49,7 +49,7 @@ class SignUpModal extends React.Component {
       password2: this.state.password2
     }).then(res => {
       console.log(res)
-      this.props.registerUser(newUser, this.props.history);
+      this.props.registerUser(createUser, this.props.history);
     })
   } else {alert("Passwords must match")}
   };
@@ -88,7 +88,7 @@ class SignUpModal extends React.Component {
   }
 }
 
-Register.propTypes = {
+SignUpModal.propTypes = {
   registerUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired
