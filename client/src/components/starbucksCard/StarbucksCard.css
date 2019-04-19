@@ -34,18 +34,29 @@ max-width: 1250px;
 
 
 
-
+/* .activator {
+    display: block;
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+} */
 
 .starbucks-info {
     display: flex !important;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
+    
 }
 
 .bottom-container {
     display: flex;
     justify-content: space-between;
+    
 }
 
 
@@ -59,6 +70,7 @@ max-width: 1250px;
     text-transform: uppercase;
     font-size: 12px;
     color: #CED1DD;
+    
 }
 
 .close-container {
@@ -81,5 +93,7 @@ max-width: 1250px;
     display: flex;
     justify-content: space-between;
 }
+
+
 
 
