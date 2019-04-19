@@ -34,6 +34,13 @@ max-width: 1250px;
 
 
 
+.activator {
+    
+        height: auto;
+        max-height: 250px;
+        width: auto;
+        max-width: 250px;
+      }
 
 
 
@@ -74,4 +81,7 @@ max-width: 1250px;
     color: black;
 }
 
-
+.list {
+    list-style-type: circle !important;
+    margin-left: 20px;
+}
