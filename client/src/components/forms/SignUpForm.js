@@ -1,19 +1,21 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import classnames from "classnames";
 
-function SignUpForm (props) {
+
+function SignUpForm (props, errors) {
      return (
       <Form>
         <FormGroup>
-          <Label for="name">Name</Label>
+          <Label for="name">Username</Label>
           <span className="red-text">{errors.name}</span>
           <Input 
-            value={props.name} 
+            value={props.username} 
             onChange={props.handleInputChange} 
             type="name" 
-            name="name" 
+            name="userName" 
             id="userName" 
-            placeholder="name"
+            placeholder="username"
             error={errors.name}
             className={classnames("", {
               invalid: errors.name

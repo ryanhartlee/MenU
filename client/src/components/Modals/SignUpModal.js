@@ -14,7 +14,7 @@ class SignUpModal extends React.Component {
     super(props);
     this.state = {
       modal: false,
-      name: "",
+      userName: "",
       email: "",
       password: "",
       password2: "",
@@ -43,13 +43,13 @@ class SignUpModal extends React.Component {
     if (this.state.password === this.state.password2) {
     this.toggle();
     axios.post('/api/users/register', {
-      name: this.state.name,
+      userName: this.state.userName,
       email: this.state.email,
       password: this.state.password,
       password2: this.state.password2
     }).then(res => {
       console.log(res)
-      this.props.registerUser(createUser, this.props.history);
+      this.props.registerUser(this.createUser, this.props.history);
     })
   } else {alert("Passwords must match")}
   };
@@ -62,6 +62,7 @@ class SignUpModal extends React.Component {
   };
 
   render() {
+    
     return (
       <div>
         <button 
