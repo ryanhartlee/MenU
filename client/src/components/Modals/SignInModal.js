@@ -3,6 +3,7 @@ import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
 import SignInForm from '../forms/SignInForm';
 import SignUpModal from './SignUpModal';
 import axios from 'axios';
+import store from '../../store'
 
 class SignInModal extends React.Component {
   constructor(props) {
@@ -28,7 +29,6 @@ class SignInModal extends React.Component {
     this.setState({
       [name]: value
     })
-    console.log(this.state)
   };
 
   loginUser = event => {
@@ -38,7 +38,9 @@ class SignInModal extends React.Component {
       password: this.state.password
     }).then(function () {
       console.log("login successfull"); 
+      console.log(store.getState());
     })
+    console.log(store.getState());
     this.toggle();
     // .catch(function (err) {
     //   alert("Invalid Username Or Password");

@@ -4,7 +4,7 @@ import '../components/logoCard/LogoCard.css';
 import UserJumbotron from '../components/user-components/profileJumbotron';
 import UserTabs from '../components/user-components/pageTabs';
 import '../components/user-components/userprofile.css';
-
+import store from '../store';
 
 class Home extends Component {
     constructor(props, context) {
@@ -12,10 +12,9 @@ class Home extends Component {
         this.state = {
             userName: 'Shrek',
             userPic: 'https://pbs.twimg.com/profile_images/806269452/shrekav_400x400.png'
-
         }
     }
-
+    
     render() {
       return (
         <div>
