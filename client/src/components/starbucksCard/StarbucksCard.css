@@ -5,16 +5,13 @@
    
  
   
-}  */
-
-
-
-
-.activator {
-    height: 200px;
-    width: 250px;
-
 } 
+
+
+
+
+
+
 
 
 .container {
@@ -22,6 +19,22 @@ max-width: 1250px;
 
 
 }
+
+.card-content {
+
+}
+
+/* .starbucks-info {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+} */
+
+
+
+
+
 
 
 .starbucks-info {
@@ -33,25 +46,23 @@ max-width: 1250px;
 
 
 
-
-
-
-
-
 .starbucks-name {
     font-weight: 700;
 }
 
 
 
-
+.close-container {
+    display: inline-block;
+    width: 100%;
+}
 
 .reveal-details {
     margin-top: 20px;
 }
 
 .reveal-details > div > span {
-   
+    color: #CED1DD;
     text-transform: uppercase;
     margin: 5px 0 5px 0;
 }
@@ -60,4 +71,5 @@ max-width: 1250px;
     display: flex;
     justify-content: space-between;
 }
- 
+
+
