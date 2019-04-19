@@ -6,6 +6,8 @@ import Starbucks from './pages/starbucks';
 import DutchBros from './pages/dutchbros';
 import Sonic from './pages/sonic';
 import UserProfile from './pages/userprofile';
+import 'materialize-css/dist/css/materialize.min.css';
+import 'materialize-css/dist/js/materialize.min.js';
 
 import { Provider } from "react-redux";
 import store from "./store";

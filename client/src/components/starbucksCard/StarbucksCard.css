@@ -1,23 +1,63 @@
-.StarbucksCard {
+/* .StarbucksCard {
     margin: 10%;
     padding: 10px;
     float: left;
    
  
   
-} 
+}  */
 
 
 
-.starbPic {
-    height: 300px;
+
+.activator {
+    height: 200px;
     width: 250px;
 
-}
+} 
 
 
 .container {
 max-width: 1250px;
 
+
 }
-  
+
+
+.starbucks-info {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+.starbucks-name {
+    font-weight: 700;
+}
+
+
+
+
+
+.reveal-details {
+    margin-top: 20px;
+}
+
+.reveal-details > div > span {
+   
+    text-transform: uppercase;
+    margin: 5px 0 5px 0;
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+}
+ 
