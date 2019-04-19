@@ -3,31 +3,33 @@ import { Button, Card, Row, Col } from 'react-materialize';
 import "./StarbucksCard.css"
 
 
-
 const StarbucksCard = props => {
   console.log(props)
   return (
 
-<Card className="StarbucksCard">
+
+
+ <Card className="StarbucksCard">
+  
 
     <div className="container">
       <style>{'body { background-color: #174; }'}</style>
 <div className="card-image waves-effect waves-block waves-light">
-      <img className="activator" alt={props.name} src={props.image} />
+      <img className="activator" src={props.image} />
  </div>
        <div className="card-content">
-         <span className="card-title activator"><i className="material-icons right">more_vert</i>
-<span className="starbucks-name"><strong>Name:</strong> {props.name}</span>
+         <span className="card-title activator">{props.name}<i className="material-icons right">more_vert</i>
+
      </span>
        </div>
 
        <div className="card-reveal">
 <div>
-         <span className="card-title"><i className="material-icons right">close</i>
-          <span className="starbucks-name">{props.name}</span>
+         <span className="card-title">{props.name}<i className="material-icons right">close</i>
+          
           </span>
           </div>
-          <div className="reveal-details">
+         
         <ul>
            <Row>
              <strong>Name:</strong> {props.name}
@@ -54,13 +56,21 @@ const StarbucksCard = props => {
 
       </div>
     </div>
-  </div>
+  
   </Card>  
   
 
 
 
   );
-};
+}; 
+
+
+
+
+
+    
+
+
 
 export default StarbucksCard;
