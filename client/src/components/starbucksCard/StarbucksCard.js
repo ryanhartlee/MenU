@@ -8,7 +8,7 @@ const StarbucksCard = props => {
   console.log(props);
   return (
     <Col m={6} s={12}>
-      <div className="card">
+      <div className="card"><style>{'.card { width:250%; height:450px; }'}</style>
         <div className="card-image waves-effect waves-block waves-light">
           <img className="activator" src={props.image} alt={props.name} />
         </div>

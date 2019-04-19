@@ -35,10 +35,6 @@ max-width: 1250px;
 
 
 
-.card {
-    width: 275%;
-}
-
 
 .starbucks-info {
     display: flex !important;
@@ -58,6 +54,7 @@ max-width: 1250px;
 .close-container {
     display: inline-block;
     width: 100%;
+    
 }
 
 .reveal-details {
