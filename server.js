@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
 // const db = require('./models');
 const app = express();
+const path = require('path');
 const PORT = process.env.PORT || 3001;
 const passport = require("passport");
 const users = require("./routes/api/users");
@@ -14,6 +15,9 @@ const validPassword = (userPassword, password) => {
 
 // passport pls work
 // Bodyparser middleware
+
+app.use(express.static(path.join(__dirname, '../')));
+
 app.use(
   bodyParser.urlencoded({
     extended: false
