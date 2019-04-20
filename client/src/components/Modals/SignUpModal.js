@@ -38,7 +38,7 @@ class SignUpModal extends React.Component {
     }).then(res => {
       console.log(res)
     })
-  } else {alert("Passwords must match")}
+  } else {alert("Passwords must match!")}
   };
 
   handleInputChange = event => {
