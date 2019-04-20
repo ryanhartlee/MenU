@@ -28,7 +28,7 @@ router.post("/register", (req, res) => {
             });
         }
         const newUser = new User({
-            name: req.body.name,
+            userName: req.body.userName,
             email: req.body.email,
             password: req.body.password
         });
@@ -75,7 +75,9 @@ router.post("/login", (req, res) => {
                 // Create JWT Payload
                 const payload = {
                     id: user.id,
-                    name: user.name
+                    userName: user.userName,
+                    email: user.email
+
                 };
                 // Sign token
                 jwt.sign(
