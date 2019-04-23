@@ -1,0 +1,36 @@
+[
+    {
+    
+        "id": 1,
+        "name": "Vanilla Cream Dr. Pepper ",
+        "image": "./images/sonicvcream.jpg",
+        "description": "This really yummy drink tastes like a Dr. Pepper float but with no ice cream added.",
+        "recipe": ["8 oz Dr. Pepper, 2oz Vinalla Syrup, 1/2 oz half & half "]
+
+
+    },
+
+    {
+    
+        "id": 2,
+        "name": "Sonic Sunrise",
+        "image": "./images/sonicsunrise.jpg",
+        "description": "The Sonic Sunrise is kind of like a Tequila Sunrise without the tequila.",
+        "recipe": ["8 oz Cherry Limeade with 4oz of Orange Juice"]
+
+
+    },
+
+    {
+    
+        "id": 3,
+        "name": "Purple Sprite",
+        "image": "./images/soincpurp.jpg",
+        "description": "It has the sweet citrus flavor of the soda coupled with all the fruity deliciousness of other the drinks in the equation.",
+        "recipe": ["8 oz Sprite with 2 oz of Powerade, lemonade, and cranberry juice"]
+
+
+    }
+
+
+]

@@ -1,20 +1,33 @@
 import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import classnames from "classnames";
 
-export default class SignInForm extends React.Component {
-  render() {
+function SignInForm (props, errors) {
     return (
       <Form>
         <FormGroup>
           <Label for="email">Email</Label>
-          <Input type="email" name="email" id="userEmail" placeholder="email" />
+          <Input value={props.email} onChange={props.handleInputChange} className={classnames("", {
+                    invalid: errors.email || errors.emailnotfound
+                  })} type="email" name="email" id="userEmail" placeholder="email" />
+                  <span className="red-text">
+                  {errors.email}
+                  {errors.emailnotfound}
+                </span>
         </FormGroup>
         <FormGroup>
           <Label for="examplePassword">Password</Label>
-          <Input type="password" name="password" id="userPassword" placeholder="password" />
+          <Input value={props.password} onChange={props.handleInputChange} className={classnames("", {
+                    invalid: errors.password || errors.passwordincorrect
+                  })} type="password" name="password" id="userPassword" placeholder="password" />
+                  <span className="red-text">
+                  {errors.password}
+                  {errors.passwordincorrect}
+                </span>
         </FormGroup>
-        <Button>Submit</Button>
+        <Button onClick={props.handleFormSubmit}>Submit</Button>
       </Form>
     );
-  }
 }
+
+export default SignInForm;
