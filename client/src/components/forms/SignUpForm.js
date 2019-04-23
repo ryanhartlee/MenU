@@ -7,7 +7,7 @@ function SignUpForm (props, errors) {
      return (
       <Form>
         <FormGroup>
-          <Label for="name">Username</Label>
+          <Label for="userName">Username</Label>
           <span className="red-text">{errors.name}</span>
           <Input 
             value={props.username} 
