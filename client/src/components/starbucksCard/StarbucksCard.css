@@ -37,6 +37,14 @@ max-width: 1250px;
     width: 100%;
 } */
 
+.activator {
+    
+  height: auto;
+  max-height: 250px;
+  width: auto;
+  max-width: 250px;
+}
+
 .starbucks-info {
   display: flex !important;
   flex-direction: column;

@@ -1,3 +1,11 @@
+.activator {
+    
+  height: auto;
+  max-height: 250px;
+  width: auto;
+  max-width: 250px;
+}
+
 .dutchbros-info {
     display: flex !important;
     flex-direction: column;
