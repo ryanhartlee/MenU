@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
 // const db = require('./models');
 const app = express();
-const PORT = process.env.PORT || 3001;
+const port = process.env.PORT || 3001;
 const passport = require("passport");
 const users = require("./routes/api/users");
 const path = require("path");
@@ -57,6 +57,6 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "./client/build/index.html"));
   });
 
-  app.listen(PORT, () => {
-    console.log(`🌎 ==> API server now on port ${PORT}!`);
+  app.listen(port, () => {
+    console.log(`🌎 ==> API server now on port ${port}!`);
   });
