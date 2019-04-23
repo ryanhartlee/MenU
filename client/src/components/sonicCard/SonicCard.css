@@ -1,4 +1,4 @@
-.starbucks-info {
+.sonic-info {
     display: flex !important;
     flex-direction: column;
     justify-content: space-between;
@@ -10,7 +10,7 @@
     justify-content: space-between;
   }
   
-  .starbucks-name {
+  .sonic-name {
     font-weight: 700;
   }
   
