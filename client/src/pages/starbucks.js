@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
-
 import NavbarZ from '../components/navbar/navbar';
-import LogoCard from '../components/logoCard/LogoCard';
-
 import '../components/logoCard/LogoCard.css'
-import { Container, Row, Col } from 'reactstrap';
+import { Container, Row, Col } from 'react-materialize';
 import StarbucksCard from '../components/starbucksCard/StarbucksCard';
 import starbucks from "../starbucks.json";
 
-
-
-import DrinkCard from '../components/drinkCard/drinkCard';
 
 class Starbucks extends Component {
 
@@ -20,12 +14,13 @@ class Starbucks extends Component {
 
     render() {
         return (
+            
             <div>
                 <NavbarZ />
                 <Container>
                     <Row>
                             {this.state.starbucks.map(starbuck => (
-                        <Col sm='3'>
+                        <Col m='3'>
 
                                 <StarbucksCard
                                     key={starbuck.name}
@@ -42,6 +37,7 @@ class Starbucks extends Component {
                     </Row>
                 </Container>
             </div>
+            
         )
     }
 }
