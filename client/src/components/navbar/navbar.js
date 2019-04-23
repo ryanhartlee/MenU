@@ -46,6 +46,9 @@ export default class NavbarZ extends React.Component {
                 <CreateDrinkModal />
               </NavItem>
               <NavItem>
+                <SignInModal />
+              </NavItem>
+              <NavItem>
                 <NavLink href="/user">Profile</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
@@ -68,9 +71,7 @@ export default class NavbarZ extends React.Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <NavItem>
-                <SignInModal />
-              </NavItem>
+              
             </Nav>
           </Collapse>
         </Navbar>
