@@ -41,9 +41,9 @@ app.use("/api/users", users);
 
 mongoose.Promise = Promise;
 
-// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/menudb";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/menudb";
 
-// mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
+mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 
 // ---MODELS---
 // (Require models here)
