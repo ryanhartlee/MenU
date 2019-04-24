@@ -18,7 +18,7 @@ function SignUpForm (props, errors) {
             placeholder="Username"
             error={errors.name}
             className={classnames("", {
-              invalid: errors.name
+              invalid: errors.username
             })}
           />
         </FormGroup>
