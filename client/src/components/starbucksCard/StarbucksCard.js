@@ -27,7 +27,7 @@ const StarbucksCard = props => {
         </div>
         <div className="card-content">
           <span className="card-title activator">
-            <span className="starbucks-name">{props.name}</span>
+            <span className="starbucks-names"><style>{'.starbucks-names {color: white;'}</style>{props.name}</span>
           </span>
         </div>
         <div className="card-reveal">
