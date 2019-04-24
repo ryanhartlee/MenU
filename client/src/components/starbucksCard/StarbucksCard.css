@@ -75,6 +75,11 @@ max-width: 1250px;
     margin: 5px 0 5px 0;
 }
 
+body{
+
+    background-image: url()
+}
+
 .detail-item {
     display: flex;
     justify-content: space-between;
