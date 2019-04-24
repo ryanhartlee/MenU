@@ -6,6 +6,9 @@ import {
   SET_CURRENT_USER,
   USER_LOADING
 } from "./types";
+
+
+
 // Register User
 export const registerUser = (userData, history) => dispatch => {
   axios
@@ -18,6 +21,8 @@ export const registerUser = (userData, history) => dispatch => {
     //   })
     // );
 };
+
+
 // Login - get user token
 export const loginUser = userData => dispatch => {
   axios
@@ -25,6 +30,7 @@ export const loginUser = userData => dispatch => {
     .then(res => {
       // Save to localStorage
 // Set token to localStorage
+console.log("token" + token)
       const { token } = res.data;
       localStorage.setItem("jwtToken", token);
       // Set token to Auth header

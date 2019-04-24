@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
+import store from '../../store';
 
 class SignInModal extends React.Component {
   constructor(props) {
@@ -54,7 +55,9 @@ class SignInModal extends React.Component {
       password: this.state.password
     }).then(function () {
       console.log("login successfull"); 
+      console.log(store.getState());
     })
+    console.log(store.getState());
     this.toggle();
     const userData = {
       email: this.state.email,

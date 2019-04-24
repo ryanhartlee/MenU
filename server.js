@@ -7,6 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const passport = require("passport");
 const users = require("./routes/api/users");
+const path = require("path");
 
 const validPassword = (userPassword, password) => {
   return userPassword === password;
