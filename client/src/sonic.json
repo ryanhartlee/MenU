@@ -16,7 +16,7 @@
         "name": "Sonic Sunrise",
         "image": "./images/sonicsunrise.jpg",
         "description": "The Sonic Sunrise is kind of like a Tequila Sunrise without the tequila.",
-        "recipe": ["8 oz Cherry Limeade with 4oz of Orange Juice"]
+        "recipe": ["8 oz Cherry Limeade", "4oz of Orange Juice"]
 
 
     },
@@ -30,7 +30,16 @@
         "recipe": ["8 oz Sprite with 2 oz of Powerade", "Lemonade", "Cranberry juice"]
 
 
-    }
+    },
+    {
+        "id": 4,
+        "name": "PLACE HOLDER",
+        "image": "./images/dutchrasp.jpg",
+        "description": "PLACE HOLDER!",
+        "recipe": [
+          "PLACE HOLDER"
+        ]
+      }
 
 
 ]
