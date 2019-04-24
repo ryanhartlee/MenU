@@ -39,6 +39,7 @@
     "express": "^4.16.4",
     "express-router-methods": "^1.0.3",
     "express-session": "^1.15.6",
+    "flippy": "^1.2.0",
     "if-env": "^1.0.4",
     "is-empty": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
@@ -61,12 +62,13 @@
     "react-flippy": "^0.1.2",
     "react-materialize": "^3.0.5",
     "react-redux": "^7.0.2",
+    "react-flipcard": "^0.2.1",
     "react-router-dom": "^5.0.0",
     "react-tabs": "^3.0.0",
     "reactstrap": "^8.0.0",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
-    "sequelize": "^5.2.12",
+    "sequelize": "^5.7.0",
     "validator": "^10.11.0"
   }
 }

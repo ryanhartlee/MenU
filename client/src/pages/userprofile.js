@@ -51,7 +51,6 @@ class Home extends Component {
         this.state = {
             userName: store.getState().auth.user.userName,
             userPic: 'https://pbs.twimg.com/profile_images/806269452/shrekav_400x400.png'
-
         }
         // store.subscribe(() => {
         //   // When state will be updated(in our case, when items will be fetched), 
