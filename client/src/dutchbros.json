@@ -4,7 +4,7 @@
     "name": "Nutty Irish Man",
     "image": "./images/dutchnuttyirish.jpg",
     "description": "The Nutty Irishman is pretty basic -- just a couple syrups mixed with cream and a whole can of cold brew on ice",
-    "recipe": ["Nitro cold brew, Irish cream and hazelnut syrups, and cream."]
+    "recipe": ["Nitro cold brew", "Irish cream and hazelnut syrups", "cream."]
   },
 
   {
@@ -13,7 +13,7 @@
     "image": "./images/dutchrainbro.jpg",
     "description": "Rainbro quickly emerged as an off-menu favorite that tastes a lot like something the Beach Boys would’ve sipped on by the pool in their 1988 hit “Kokomo.”",
     "recipe": [
-      "Strawberry, peach, and coconut syrups and a can of Rebel energy drink over ice."
+      "Strawberry", "peach", "and coconut syrups and a can of Rebel energy drink over ice."
     ]
   },
 
@@ -23,7 +23,7 @@
     "image": "./images/dutchhorchata.jpg",
     "description": "This sweet and spicy drink it perfect for those that was to excite their taste buds!",
     "recipe": [
-      "Cinnamon syrup, caramel and white chocolate sauces, Oregon chai, and 2% milk"
+      "Cinnamon syrup", "caramel and white chocolate sauces", "Oregon chai", "and 2% milk"
     ]
   },
 
@@ -33,7 +33,7 @@
     "image": "./images/dutchrasp.jpg",
     "description": "If you’re the person who always gets stuck with the fruit filled dark chocolate candies, there’s a good chance Dutch Bros can make you something that tastes just like it!",
     "recipe": [
-      "Raspberry syrup, white chocolate sauce, English toffee syrup, and milk"
+      "Raspberry syrup", "white chocolate sauce", "English toffee syrup", "and milk"
     ]
   }
 

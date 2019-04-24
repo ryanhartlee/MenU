@@ -30,15 +30,15 @@ const DutchBrosCard = props => {
                 </span>
               </div>
               <div className="reveal-details">
-                <div className="detail-item">
+                <div className="detail-item row">
                   <span>Description:</span> <span>{props.description}</span>
                 </div>
-                <div className="detail-item">
-                  <span>Recipe:</span>{" "}
+                <div className="detail-item row">
+                  <span>Recipe:</span>
                   <span>
                     <ul>
                       {props.recipe.map(ing => (
-                        <li>{ing}</li>
+                        <li className = "list"> {ing}</li>
                       ))}
                     </ul>
                   </span>

@@ -44,8 +44,14 @@
     text-transform: uppercase;
     margin: 5px 0 5px 0;
   }
-  
+
   .detail-item {
     display: flex;
     justify-content: space-between;
-  }
+    color: black;
+}
+
+.list {
+    list-style-type: circle !important;
+    margin-left: 20px;
+}
