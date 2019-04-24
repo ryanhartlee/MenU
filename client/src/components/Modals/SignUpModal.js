@@ -73,7 +73,7 @@ class SignUpModal extends React.Component {
         <Modal 
           isOpen={this.state.modal} 
           toggle={this.toggle} 
-          className={this.props.className}>
+          className="modalz">
             <ModalHeader 
               toggle={this.toggle}>Sign Up
             </ModalHeader>
