@@ -31,8 +31,8 @@ const SonicCard = props => {
                   <div className="detail-item row">
                     <span>Description:</span> <span>{props.description}</span>
                   </div>
-                  <div className="detail-item row ">
-                    <span>Recipe:</span>
+                  <div className="detail-item row">
+                    <span><strong>Recipe:</strong></span>
                     <span>
                       <ul>
                         {props.recipe.map(ing => (

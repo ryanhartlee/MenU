@@ -48,8 +48,9 @@
   .detail-item {
     display: flex;
     justify-content: space-between;
-    color: black;
-}
+  }
+
+
 
 .list {
     list-style-type: circle !important;

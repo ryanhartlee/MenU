@@ -34,11 +34,11 @@ const DutchBrosCard = props => {
                   <span>Description:</span> <span>{props.description}</span>
                 </div>
                 <div className="detail-item row">
-                  <span>Recipe:</span>
+                  <span><strong>Recipe:</strong></span>
                   <span>
                     <ul>
                       {props.recipe.map(ing => (
-                        <li className = "list"> {ing}</li>
+                        <li className="list">{ing}</li>
                       ))}
                     </ul>
                   </span>
