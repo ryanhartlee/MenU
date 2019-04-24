@@ -33,11 +33,11 @@
     },
     {
         "id": 4,
-        "name": "PLACE HOLDER",
-        "image": "./images/dutchrasp.jpg",
-        "description": "PLACE HOLDER!",
+        "name": "Pink Lady",
+        "image": "./images/sonicpink.jpg",
+        "description": "The not so secret, secret drink. This drink was on the regular menu at Sonic so many employees are still versed in how to make this tasty concoction.",
         "recipe": [
-          "PLACE HOLDER"
+          "8oz Sprite", "4oz cherry juice", "and 4oz vanilla cream"
         ]
       }
 
