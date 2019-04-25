@@ -6,7 +6,6 @@ import axios from 'axios';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
-import classnames from "classnames";
 import store from '../../store';
 
 class SignInModal extends React.Component {

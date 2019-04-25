@@ -1,11 +1,11 @@
 import React from 'react';
-import { Jumbotron, Button, CardImg } from 'reactstrap';
+// import { Jumbotron, Button, CardImg } from 'reactstrap';
 
 
 const UserJumbotron = (props) => {
   return (
     <div className='jumbotron container'>
-        <img className="UserCardImage" src={props.userPic}></img>
+        <img className="UserCardImage" src={props.userPic} alt={props.userName}></img>
         <div className="userJumbo">
           <h1>Welcome to MenU, {props.userName}</h1>
             <br />

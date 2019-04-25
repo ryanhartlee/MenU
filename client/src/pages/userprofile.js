@@ -7,9 +7,9 @@ import '../components/user-components/userprofile.css';
 import jwt_decode from "jwt-decode";
 import setAuthToken from "../utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "../actions/authActions";
-import { Provider } from "react-redux";
+// import { Provider } from "react-redux";
 import store from "../store";
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
 
 

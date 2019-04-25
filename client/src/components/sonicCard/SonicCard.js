@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, Row, Col } from "react-materialize";
+import { Col } from "react-materialize";
 import "./SonicCard.css";
 
 const SonicCard = props => {

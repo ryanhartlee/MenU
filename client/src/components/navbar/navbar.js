@@ -38,7 +38,7 @@ export default class NavbarZ extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
           <NavbarBrand>
            <div className="logoImage">
-           <a href="/"><img src={logo}></img></a>
+           <a href="/"><img src={logo} alt=""></img></a>
            </div>
           </NavbarBrand>
             <Nav className="ml-auto" navbar>
