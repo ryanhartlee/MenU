@@ -10,9 +10,9 @@ const users = require("./routes/api/users");
 const path = require("path");
 // const routes = require("./routes");
 
-const validPassword = (userPassword, password) => {
-  return userPassword === password;
-}
+// const validPassword = (userPassword, password) => {
+//   return userPassword === password;
+// }
 
 // passport pls work
 // Bodyparser middleware

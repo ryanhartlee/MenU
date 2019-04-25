@@ -3,6 +3,6 @@ module.exports = {
   };
 
 module.exports = {
-    mongoURI: "YOUR_MONGOURI_HERE",
+    mongoURI: "mongodb://testuser:testuser1@ds239206.mlab.com:39206/heroku_g6wz19x7",
     secretOrKey: "secret"
   };
