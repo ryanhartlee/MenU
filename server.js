@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 // const db = require('./models');
 const app = express();
 
-const port = process.env.PORT || 3001;
+const Port = process.env.PORT || 3001;
 const passport = require("passport");
 const users = require("./routes/api/users");
 const drinks = require("./routes/api/drinks")
@@ -68,6 +68,6 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-  app.listen(port, () => {
-    console.log(`🌎 ==> API server now on port ${port}!`);
+  app.listen(Port, () => {
+    console.log(`🌎 ==> API server now on port ${Port}!`);
   });
