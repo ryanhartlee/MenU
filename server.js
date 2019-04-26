@@ -2,7 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
-const db = require('./models');
+// const db = require('./models');
 const app = express();
 const PORT = process.env.PORT || 3001;
 const passport = require("passport");
@@ -20,7 +20,7 @@ app.use(
 app.use(bodyParser.json());
 
 // DB Config
-// const db = require("./config/keys").mongoURI;
+const db = require("./config/keys").mongoURI;
 
 // Connect to MongoDB
 mongoose
@@ -65,7 +65,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Send every other request to the React app
 // Define any API routes before this runs
-app.get("/", (req, res) => {
+app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
