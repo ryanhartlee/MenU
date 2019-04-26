@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 // const db = require('./models');
 const app = express();
 
-const PORT = process.env.PORT || 3001;
+const Port = process.env.PORT || 3001;
 const passport = require("passport");
 const users = require("./routes/api/users");
 const drinks = require("./routes/api/drinks")
@@ -63,6 +63,6 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "./client/src/index.js"));
   });
 
-  app.listen(PORT, () => {
-    console.log(`🌎 ==> API server now on port ${PORT}!`);
+  app.listen(Port, () => {
+    console.log(`🌎 ==> API server now on port ${Port}!`);
   });
