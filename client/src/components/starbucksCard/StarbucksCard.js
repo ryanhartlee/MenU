@@ -11,7 +11,7 @@ const StarbucksCard = props => {
       <div className="card"><style>{'.card { background: #1e3932; width:250%; height:450px;'}</style>
 
         
-        <div className="card-image waves-effect waves-block waves-light"><i class="material-icons right"></i>
+        <div className="card-image waves-effect waves-block waves-light"><style>{'.card { height:400px;'}</style><i class="material-icons right"></i>
           <img className="activator" src={props.image} alt={props.name} 
           />
 
