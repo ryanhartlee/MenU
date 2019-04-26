@@ -17,10 +17,6 @@ const validPassword = (userPassword, password) => {
   return userPassword === password;
 }
 
-// passport pls work
-// Bodyparser middleware
-
-
 
 app.use(
   bodyParser.urlencoded({
