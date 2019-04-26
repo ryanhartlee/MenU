@@ -6,15 +6,6 @@ import "./StarbucksCard.css";
 
 const StarbucksCard = props => {
   console.log(props);
-
-  
-  
-
- 
-
-
-
-
   return (
     <Col m={6} s={12}>
       <div className="card"><style>{'.card { background: #1e3932; width:250%; height:450px;'}</style>
