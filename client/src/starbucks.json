@@ -56,7 +56,7 @@
 {
     "id": 8,
     "name": "Mango Milk Tea",
-    "image": "./images/Mango.jpg",
+    "image": "./images/MangoMilk.jpg",
     "description": "Don't have a Bubble tea shop next to you? Try this combo at your closest Starbucks!",
     "recipe": ["Iced black tea", "Made with half and half instead of water","Mango syrup (1 pump tall, 2 grande, 2.5 venti)"]
 }

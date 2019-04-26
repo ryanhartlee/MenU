@@ -6,15 +6,28 @@ import "./StarbucksCard.css";
 
 const StarbucksCard = props => {
   console.log(props);
+
+  
+  
+
+ 
+
+
+
+
   return (
     <Col m={6} s={12}>
-      <div className="card">
-        <div className="card-image waves-effect waves-block waves-light">
-          <img className="activator" src={props.image} alt={props.name} />
+      <div className="card"><style>{'.card { background: #1e3932; width:250%; height:450px;'}</style>
+
+        
+        <div className="card-image waves-effect waves-block waves-light"><i class="material-icons right"></i>
+          <img className="activator" src={props.image} alt={props.name} 
+          />
+
         </div>
         <div className="card-content">
           <span className="card-title activator">
-            <span className="starbucks-name">{props.name}</span>
+            <span className="starbucks-names"><style>{'.starbucks-names {color: white;'}</style>{props.name}</span>
           </span>
         </div>
         <div className="card-reveal">
@@ -26,15 +39,18 @@ const StarbucksCard = props => {
                 </span>
               </div>
               <div className="reveal-details">
-                <div className="detail-item">
-                  <span>Description:</span> <span>{props.description}</span>
+                <div className="detail-item row">
+                  <span><strong>Description:</strong></span> 
+                 
+                  <span>{props.description}</span>
+                  
                 </div>
-                <div className="detail-item">
-                  <span>Recipe:</span>{" "}
+                <div className="detail-item row">
+                  <span><strong>Recipe:</strong></span>
                   <span>
                     <ul>
                       {props.recipe.map(ing => (
-                        <li>{ing}</li>
+                        <li className="list">{ing}</li>
                       ))}
                     </ul>
                   </span>
@@ -43,7 +59,8 @@ const StarbucksCard = props => {
             </div>
           </div>
         </div>
-      </div>
+        </div>
+      
    </Col>
   );
 };
