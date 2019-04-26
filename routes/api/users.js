@@ -7,7 +7,7 @@ const keys = require("../../config/keys");
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 // Load User model
-const User = require("../../models/User");
+const db = require("../../models");
 
 router.post("/register", (req, res) => {
     // Form validation
@@ -19,7 +19,7 @@ router.post("/register", (req, res) => {
     if (!isValid) {
         return res.status(400).json(errors);
     }
-    User.findOne({
+    db.User.findOne({
         email: req.body.email
     }).then(user => {
         if (user) {
@@ -59,7 +59,7 @@ router.post("/login", (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
     // Find user by email
-    User.findOne({
+    db.User.findOne({
         email
     }).then(user => {
         // Check if user exists
