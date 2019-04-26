@@ -63,8 +63,8 @@ function SignUpForm (props, errors) {
             type="password" 
             name="password2" 
             // Change this ID to password2?
-            id="password2" 
-            placeholder="confim password" 
+            id="userConfPassword" 
+            placeholder="Confim Password" 
             error={errors.password2}
             className={classnames("", {
               invalid: errors.password2
