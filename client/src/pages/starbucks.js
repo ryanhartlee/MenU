@@ -17,8 +17,6 @@ class Starbucks extends Component {
     recipe: " ",
     image: " " || "https://images.assetsdelivery.com/compings_v2/rastudio/rastudio1601/rastudio160103409.jpg"
     };
-<<<<<<< HEAD
-=======
 
     pullDrink = () => {
 
@@ -32,7 +30,6 @@ class Starbucks extends Component {
     console.log("bacon");   }
     componentDidMount(){this.pullDrink()}
     
->>>>>>> 3a8c5df10238cfb0c2664edd21e5e33af1c09a59
     render() {
         return (
             
