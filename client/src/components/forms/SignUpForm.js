@@ -15,7 +15,7 @@ function SignUpForm (props, errors) {
             type="name" 
             name="userName" 
             id="userName" 
-            placeholder="username"
+            placeholder="Username"
             error={errors.name}
             className={classnames("", {
               invalid: errors.username
@@ -31,7 +31,7 @@ function SignUpForm (props, errors) {
             type="email" 
             name="email" 
             id="userEmail" 
-            placeholder="email"
+            placeholder="Email"
             error={errors.email}
             className={classnames("", {
               invalid: errors.email
@@ -47,7 +47,7 @@ function SignUpForm (props, errors) {
             type="password" 
             name="password" 
             id="userPassword" 
-            placeholder="password" 
+            placeholder="Password" 
             error={errors.password}
             className={classnames("", {
               invalid: errors.password
@@ -63,8 +63,8 @@ function SignUpForm (props, errors) {
             type="password" 
             name="password2" 
             // Change this ID to password2?
-            id="password2" 
-            placeholder="confim password" 
+            id="userConfPassword" 
+            placeholder="Confim Password" 
             error={errors.password2}
             className={classnames("", {
               invalid: errors.password2
