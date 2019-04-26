@@ -21,6 +21,8 @@ class SignInModal extends React.Component {
     this.toggle = this.toggle.bind(this);
   }
 
+  
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
       // this.props.history.push("/"); // push user to dashboard when they login
@@ -72,7 +74,7 @@ class SignInModal extends React.Component {
     return (
       <div>
         <Button onClick={this.toggle}>Log In</Button>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className="modalz">
           <ModalHeader toggle={this.toggle}>Sign In</ModalHeader>
           <ModalBody>
             <SignInForm handleFormSubmit={this.loginUser} handleInputChange={this.handleInputChange} />

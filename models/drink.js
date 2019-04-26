@@ -7,6 +7,10 @@ const drinkSchema = new Schema({
         type: String,
         required: true
     },
+    restaurant: {
+        type: String,
+        required: true
+    },
     description: {
         type: String,
         required: true

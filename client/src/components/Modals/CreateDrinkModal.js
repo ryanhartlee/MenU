@@ -24,9 +24,14 @@ class CreateDrinkModal extends React.Component {
   }
 
   createDrink = event => {
-    console.log(this.state);
-    axios.post('/starbucks/drinks/', this.state).then(res => {
-      console.log(res)
+    // console.log('yeeet', this.state);
+    this.toggle();
+    console.log(this.state)
+    axios.post('/drinks', {
+      name: this.state.name,
+      restaurant: this.state.restaurant,
+      description: this.state.description,
+      recipe: this.state.recipe
     })
   };
 
@@ -40,7 +45,7 @@ class CreateDrinkModal extends React.Component {
   render() {
     return (
       <div>
-        <Button onClick={this.toggle}>Create A Drink!</Button>
+        <button className="btn" onClick={this.toggle}>Create A Drink!</button>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Post Drink</ModalHeader>
           <ModalBody>

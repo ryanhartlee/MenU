@@ -1,36 +1,36 @@
 [
-    {
-    
-        "id": 1,
-        "name": "Vanilla Cream Dr. Pepper ",
-        "image": "./images/sonicvcream.jpg",
-        "description": "This really yummy drink tastes like a Dr. Pepper float but with no ice cream added.",
-        "recipe": ["8 oz Dr. Pepper, 2oz Vinalla Syrup, 1/2 oz half & half "]
+  {
+    "id": 1,
+    "name": "Vanilla Cream Dr. Pepper ",
+    "image": "./images/sonicvcream.jpg",
+    "description": "This really yummy drink tastes like a Dr. Pepper float but with no ice cream added.",
+    "recipe": ["8 oz Dr. Pepper", "2oz Vinalla Syrup", "1/2 oz half & half "]
+  },
 
+  {
+    "id": 2,
+    "name": "Sonic Sunrise",
+    "image": "./images/sonicsunrise.jpg",
+    "description": "The Sonic Sunrise is kind of like a Tequila Sunrise without the tequila.",
+    "recipe": ["8 oz Cherry Limeade", "4oz of Orange Juice"]
+  },
 
-    },
-
-    {
-    
-        "id": 2,
-        "name": "Sonic Sunrise",
-        "image": "./images/sonicsunrise.jpg",
-        "description": "The Sonic Sunrise is kind of like a Tequila Sunrise without the tequila.",
-        "recipe": ["8 oz Cherry Limeade with 4oz of Orange Juice"]
-
-
-    },
-
-    {
-    
-        "id": 3,
-        "name": "Purple Sprite",
-        "image": "./images/soincpurp.jpg",
-        "description": "It has the sweet citrus flavor of the soda coupled with all the fruity deliciousness of other the drinks in the equation.",
-        "recipe": ["8 oz Sprite with 2 oz of Powerade, lemonade, and cranberry juice"]
-
-
-    }
-
-
+  {
+    "id": 3,
+    "name": "Purple Sprite",
+    "image": "./images/soincpurp.jpg",
+    "description": "It has the sweet citrus flavor of the soda coupled with all the fruity deliciousness of other the drinks in the equation.",
+    "recipe": [
+      "8 oz Sprite with 2 oz of Powerade",
+      "Lemonade",
+      "Cranberry juice"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Pink Lady",
+    "image": "./images/sonicpink.jpg",
+    "description": "The not so secret, secret drink. This drink was on the regular menu at Sonic so many employees are still versed in how to make this tasty concoction.",
+    "recipe": ["8oz Sprite", "4oz cherry juice", "4oz vanilla cream"]
+  }
 ]

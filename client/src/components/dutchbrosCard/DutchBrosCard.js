@@ -11,14 +11,14 @@ const DutchBrosCard = props => {
       <div className="card"><style>{'.card { background: #fefe31; width:250%; height:450px;'}</style>
 
         
-        <div className="card-image waves-effect waves-block waves-light"><i class="material-icons right"></i>
+        <div className="card-image waves-effect waves-block waves-light"><style>{'.card { height:400px;'}</style><i class="material-icons right"></i>
           <img className="activator" src={props.image} alt={props.name} 
           />
 
         </div>
         <div className="card-content">
           <span className="card-title activator">
-            <span className="dutchbros-name">{props.name}</span>
+            <span className="dutchbros-names">{props.name}</span>
           </span>
         </div>
         <div className="card-reveal">
@@ -30,15 +30,15 @@ const DutchBrosCard = props => {
                 </span>
               </div>
               <div className="reveal-details">
-                <div className="detail-item">
+                <div className="detail-item row">
                   <span>Description:</span> <span>{props.description}</span>
                 </div>
-                <div className="detail-item">
-                  <span>Recipe:</span>{" "}
+                <div className="detail-item row">
+                  <span><strong>Recipe:</strong></span>
                   <span>
                     <ul>
                       {props.recipe.map(ing => (
-                        <li>{ing}</li>
+                        <li className="list">{ing}</li>
                       ))}
                     </ul>
                   </span>

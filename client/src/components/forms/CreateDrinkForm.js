@@ -6,7 +6,9 @@ function CreateDrinkForm (props) {
       <Form>
           <FormGroup>
           <Label for="restaurantSelect">Select Restaurant</Label>
-          <Input type="select" name="restauranSelect" id="restaurantSelect">
+          <Input type="select" name="restaurant" 
+          onChange={props.handleInputChange} id="restaurantSelect">
+            <option>---Choose an Option---</option>
             <option>Starbucks</option>
             <option>Dutch Bros</option>
             <option>Sonic</option>
@@ -31,7 +33,7 @@ function CreateDrinkForm (props) {
          Upload an image of your secret menu item.
        </FormText>
      </FormGroup>
-     <Button>Submit</Button>
+     <Button onClick={props.handleFormSubmit}>Submit</Button>
     </Form>
     );
   }

@@ -2,11 +2,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
+
 // const db = require('./models');
 const app = express();
+
 const PORT = process.env.PORT || 3001;
 const passport = require("passport");
 const users = require("./routes/api/users");
+const drinks = require("./routes/api/drinks")
 const path = require("path");
 // const routes = require("./routes");
 
@@ -39,6 +42,7 @@ require("./config/passport")(passport);
 
 // Routes
 app.use("/api/users", users);
+app.use("/drinks", drinks);
 // app.use(routes);
 
 // Server static assets if in production
