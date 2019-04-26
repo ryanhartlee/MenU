@@ -15,4 +15,8 @@ router.post("/", (req, res) => {
     newDrink.save();
 })
 
+router.get("/", (req, res) => {
+    
+})
+
 module.exports = router;

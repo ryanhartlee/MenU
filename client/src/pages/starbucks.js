@@ -4,13 +4,22 @@ import '../components/logoCard/LogoCard.css'
 import { Container, Row, Col } from 'react-materialize';
 import StarbucksCard from '../components/starbucksCard/StarbucksCard';
 import starbucks from "../starbucks.json";
+import axios from "axios"
 
 
 class Starbucks extends Component {
 
     state = {
-        starbucks
+    starbucks:starbucks,
+    name: " ",
+    description: " ",
+    recipe: " ",
+    image: " " || "https://images.assetsdelivery.com/compings_v2/rastudio/rastudio1601/rastudio160103409.jpg"
     };
+
+    pullDrink = () => {
+
+    }
 
     render() {
         return (
