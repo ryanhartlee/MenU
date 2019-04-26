@@ -1,64 +1,91 @@
 [
-    {
-    
-        "id": 1,
-        "name": "Purple Drink",
-        "image": "./images/Pink-Purple-Drink.jpg",
-        "description": "Ombre Drink",
-        "recipe": ["1 part Pink Drink (Strawberry Acai Refresher with coconut milk)", "1 part Purple Drink (Passion Iced Tea with soy , vanilla syrup & blackberries)"]
-
- 
-        
-    
-    },
-    {
-        "id": 2,
-        "name": "Cotton Candy Drink",
-        "image": "./images/Cottoncandy.jpg",
-        "description": "Yummy, non caffeinated frap that tastes like cotton candy.",
-        "recipe": ["Vanilla Bean Frappuccino", "Add Raspberry Syrup (1 pump tall, 1.5 pumps grande, 2 pumps venti)"]
-    },
-    {
-        "id": 3,
-        "name": "Skittles Frappucino",
-        "image": "./images/SkittlesFrap.jpg",
-        "description": "It’s fun and fruity just like its candy counterpart!",
-        "recipe": ["Strawberries and Crème Frappuccino", "No classic syrup", "Add Vanilla Syrup (2 pumps tall, 3 pumps grande, 4 pumps venti)", "Add Raspberry Syrup (½ pump tall, 1 pump grande, 1.5 pumps venti)"]
-    },
-    {
-        "id": 4,
-        "name": "Juniper Lemonade",
-        "image": "./images/JuniperLemon.jpg",
-        "description": "Hint of juniper and sage, an evergreen aroma and citrus notes",
-        "recipe": ["Lemonade", "Add juniper syrup (2 pumps tall, 3 grande, 4 venti)", "Add classic syrup (1 pump tall, 2 grande, 3 venti)"]
-    },
-    {
-        "id": 5,
-        "name": "Caramel Snickerdoodle Macchiato",
-        "image": "./images/Snickerdoodle.jpg",
-        "description": "It’s sweet but not too sweet and has a delicious blend of caramel, cinnamon and a bit of vanilla",
-        "recipe": ["Iced Soy Caramel Macchiato, upside down", "Add Vanilla Syrup (1 pump tall, 1.5 pumps grande, 2 pumps venti)", "Add Cinnamon Dolce Syrup (1 pump tall, 1.5 pumps grande, 2 pumps venti)"]
-    },
-    {
+  {
+    "id": 1,
+    "name": "Purple Drink",
+    "image": "./images/Pink-Purple-Drink.jpg",
+    "description": "Ombre Drink",
+    "recipe": [
+      "1 part Pink Drink (Strawberry Acai Refresher with coconut milk)",
+      "1 part Purple Drink (Passion Iced Tea with soy , vanilla syrup & blackberries)"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Cotton Candy Drink",
+    "image": "./images/Cottoncandy.jpg",
+    "description": "Yummy, non caffeinated frap that tastes like cotton candy.",
+    "recipe": [
+      "Vanilla Bean Frappuccino",
+      "Add Raspberry Syrup (1 pump tall, 1.5 pumps grande, 2 pumps venti)"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Skittles Frappucino",
+    "image": "./images/SkittlesFrap.jpg",
+    "description": "It’s fun and fruity just like its candy counterpart!",
+    "recipe": [
+      "Strawberries and Crème Frappuccino",
+      "No classic syrup",
+      "Add Vanilla Syrup (2 pumps tall, 3 pumps grande, 4 pumps venti)",
+      "Add Raspberry Syrup (½ pump tall, 1 pump grande, 1.5 pumps venti)"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Juniper Lemonade",
+    "image": "./images/JuniperLemon.jpg",
+    "description": "Hint of juniper and sage, an evergreen aroma and citrus notes.",
+    "recipe": [
+      "Lemonade",
+      "Add juniper syrup (2 pumps tall, 3 grande, 4 venti)",
+      "Add classic syrup (1 pump tall, 2 grande, 3 venti)"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Caramel Snickerdoodle Macchiato",
+    "image": "./images/Snickerdoodle.jpg",
+    "description": "It’s sweet but not too sweet and has a delicious blend of caramel, cinnamon and a bit of vanilla.",
+    "recipe": [
+      "Iced Soy Caramel Macchiato, upside down",
+      "Add Vanilla Syrup (1 pump tall, 1.5 pumps grande, 2 pumps venti)",
+      "Add Cinnamon Dolce Syrup (1 pump tall, 1.5 pumps grande, 2 pumps venti)"
+    ]
+  },
+  {
     "id": 6,
     "name": "Sunset Refresher",
     "image": "./images/Sunrise.jpg",
     "description": "This citrus-y beverage is refreshing and not too sweet!",
-    "recipe": ["Cool Lime Refresher to the first line", "Lemonade to the second line and a few pieces of lime","Top up with ice and black tea"]
-},
-{
+    "recipe": [
+      "Cool Lime Refresher to the first line",
+      "Lemonade to the second line and a few pieces of lime",
+      "Top up with ice and black tea"
+    ]
+  },
+  {
     "id": 7,
     "name": "Raspberry Cheesecake Latte",
     "image": "./images/Cheesecake.jpg",
     "description": "No creamcheese needed, but the caramel flan syrup adds rich creaminess that will drive your tastebuds crazy!",
-    "recipe": ["Starbucks latte flavored with:", "Flan syrup (3 pumps tall, 4 grande, 5 venti)","Cinnamon Dolce syrup (1.5 pumps tall, 2 grande, 3 venti)", "Raspberry syrup (1.5 pumps, 2 grande and venti)","Caramel whip on top, flan drizzle optional"]
-},
-{
+    "recipe": [
+      "Starbucks latte flavored with:",
+      "Flan syrup (3 pumps tall, 4 grande, 5 venti)",
+      "Cinnamon Dolce syrup (1.5 pumps tall, 2 grande, 3 venti)",
+      "Raspberry syrup (1.5 pumps, 2 grande and venti)",
+      "Caramel whip on top, flan drizzle optional"
+    ]
+  },
+  {
     "id": 8,
     "name": "Mango Milk Tea",
     "image": "./images/MangoMilk.jpg",
     "description": "Don't have a Bubble tea shop next to you? Try this combo at your closest Starbucks!",
-    "recipe": ["Iced black tea", "Made with half and half instead of water","Mango syrup (1 pump tall, 2 grande, 2.5 venti)"]
-}
-
+    "recipe": [
+      "Iced black tea",
+      "Made with half and half instead of water",
+      "Mango syrup (1 pump tall, 2 grande, 2.5 venti)"
+    ]
+  }
 ]

@@ -4,13 +4,31 @@ import '../components/logoCard/LogoCard.css'
 import { Container, Row, Col } from 'react-materialize';
 import SonicCard from '../components/sonicCard/SonicCard';
 import sonic from "../sonic.json";
+import axios from "axios"
 
 
 class Sonic extends Component {
 
     state = {
-        sonic
+        sonic:sonic,
+        drinks: [],
+    name: " ",
+    description: " ",
+    recipe: " ",
+    image: " " || "https://images.assetsdelivery.com/compings_v2/rastudio/rastudio1601/rastudio160103409.jpg"
     };
+
+    pullDrink = () => {
+
+        axios.get ("/drinks/sonic").then(res => {
+            console.log(res.data)
+            // let drinks= res.data
+            this.setState({drinks:res.data});
+            console.log(this.state);
+        
+        });
+        console.log("bacon");   }
+        componentDidMount(){this.pullDrink()}
 
     render() {
         return (
@@ -34,6 +52,21 @@ class Sonic extends Component {
 
                         </Col>
                             ))}
+                             {this.state.drinks.map(drink => (
+                      <Col m='3'>
+
+                      <SonicCard
+                          key={drink.name}
+                          id={drink.id}
+                          name={drink.name}
+                          image={"https://images.assetsdelivery.com/compings_v2/rastudio/rastudio1601/rastudio160103409.jpg"}
+                          description={drink.description}
+                          recipe={drink.recipe}
+                      />
+                      
+                        </Col>
+             
+                  ))}
                     </Row>
                 </Container>
             </div>

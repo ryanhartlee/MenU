@@ -6,35 +6,26 @@ import "./StarbucksCard.css";
 
 const StarbucksCard = props => {
   console.log(props);
-
-  
-  
-
- 
-
-
-
-
   return (
-    <Col m={6} s={12}>
+    <div>
       <div className="card"><style>{'.card { background: #1e3932; width:250%; height:450px;'}</style>
 
         
-        <div className="card-image waves-effect waves-block waves-light"><i class="material-icons right"></i>
+        <div className="card-image waves-effect waves-block waves-light"><style>{'.card { height:400px;'}</style>
           <img className="activator" src={props.image} alt={props.name} 
           />
 
         </div>
         <div className="card-content">
           <span className="card-title activator">
-            <span className="starbucks-name">{props.name}</span>
+            <span className="starbucks-names"><style>{'.starbucks-names {color: white;'}</style>{props.name}</span>
           </span>
         </div>
         <div className="card-reveal">
           <div className="starbucks-info">
             <div className="card-top">
               <div>
-                <span className="card-title">
+                <span className="card-title"><span><i class="material-icons right">close</i></span>
                   <span className="starbucks-name">{props.name}</span>
                 </span>
               </div>
@@ -60,8 +51,9 @@ const StarbucksCard = props => {
           </div>
         </div>
         </div>
+        </div>
       
-   </Col>
+
   );
 };
 

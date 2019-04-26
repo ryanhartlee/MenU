@@ -40,6 +40,8 @@ app.use(passport.initialize());
 // Passport config
 require("./config/passport")(passport);
 // Routes
+
+
 app.use("/api/users", users);
 app.use("/drinks", drinks);
 
@@ -61,6 +63,6 @@ app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "./client/src/index.js"));
   });
 
-  app.listen(PORT, () => {
-    console.log(`🌎 ==> API server now on port ${PORT}!`);
+  app.listen(Port, () => {
+    console.log(`🌎 ==> API server now on port ${Port}!`);
   });
