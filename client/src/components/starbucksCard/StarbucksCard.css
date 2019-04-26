@@ -1,52 +1,9 @@
 .activator {
-    
   height: auto;
   max-height: 250px;
   width: auto;
   max-width: 250px;
 }
-
-
-.starbucks-info {
-    display: flex !important;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-  }
-  
-  .bottom-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .starbucks-name {
-    font-weight: 700;
-  }
-  
-  .details {
-    display: flex;
-    justify-content: space-between;
-    text-transform: uppercase;
-    font-size: 12px;
-    color: #ced1dd;
-  }
-  
-  .close-container {
-    display: inline-block;
-    width: 100%;
-
-} */
-
-
-
-.activator {
-    
-        height: auto;
-        max-height: 250px;
-        width: auto;
-        max-width: 250px;
-      }
-
 
 .starbucks-info {
   display: flex !important;
@@ -60,9 +17,8 @@
   justify-content: space-between;
 }
 
-.starbucks-name {
+.starbucks-names {
   font-weight: 700;
-  
 }
 
 .details {
@@ -88,22 +44,17 @@
   margin: 5px 0 5px 0;
 }
 
-body{
-
-    background-image: url()
+body {
+  background-image: url();
 }
 
-
-
-  .detail-item {
-    display: flex;
-    justify-content: space-between;
-    color: black;
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  color: black;
 }
 
 .list {
-list-style-type: circle !important;
-margin-left: 20px;
+  list-style-type: circle !important;
+  margin-left: 20px;
 }
-
-
