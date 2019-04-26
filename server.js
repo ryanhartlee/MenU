@@ -53,7 +53,7 @@ if(process.env.NODE_ENV === 'production') {
 
 mongoose.Promise = Promise;
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/menudb";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/menudb";
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
