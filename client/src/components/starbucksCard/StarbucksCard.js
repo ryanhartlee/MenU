@@ -16,7 +16,7 @@ const StarbucksCard = props => {
 
 
   return (
-    <Col m={6} s={12}>
+    <div>
       <div className="card"><style>{'.card { background: #1e3932; width:250%; height:450px;'}</style>
 
         
@@ -60,8 +60,9 @@ const StarbucksCard = props => {
           </div>
         </div>
         </div>
+        </div>
       
-   </Col>
+
   );
 };
 

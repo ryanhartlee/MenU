@@ -11,6 +11,7 @@ class Starbucks extends Component {
 
     state = {
     starbucks:starbucks,
+    drinks: [],
     name: " ",
     description: " ",
     recipe: " ",
@@ -19,8 +20,16 @@ class Starbucks extends Component {
 
     pullDrink = () => {
 
-    }
-
+    axios.get ("/drinks/starbucks").then(res => {
+        console.log(res.data)
+        // let drinks= res.data
+        this.setState({drinks:res.data});
+        console.log(this.state);
+    
+    });
+    console.log("bacon");   }
+    componentDidMount(){this.pullDrink()}
+    
     render() {
         return (
             
@@ -28,8 +37,9 @@ class Starbucks extends Component {
                 <NavbarZ />
                 <Container>
                     <Row>
+                         <Col m='3'>
                             {this.state.starbucks.map(starbuck => (
-                        <Col m='3'>
+                       
 
                                 <StarbucksCard
                                     key={starbuck.name}
@@ -41,8 +51,25 @@ class Starbucks extends Component {
                                 />
                                 
 
-                        </Col>
+                       
                             ))}
+                            {this.state.drinks.map(drink => (
+                      
+
+                                <StarbucksCard
+                                    key={drink.name}
+                                    id={drink.id}
+                                    name={drink.name}
+                                    image={"https://images.assetsdelivery.com/compings_v2/rastudio/rastudio1601/rastudio160103409.jpg"}
+                                    description={drink.description}
+                                    recipe={drink.recipe}
+                                />
+                                
+
+                       
+                            ))}
+                        </Col>
+
                     </Row>
                 </Container>
             </div>
