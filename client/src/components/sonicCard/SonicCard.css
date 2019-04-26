@@ -18,7 +18,7 @@
     justify-content: space-between;
   }
   
-  .sonic-name {
+  .sonic-names {
     font-weight: 700;
   }
   
@@ -45,9 +45,14 @@
     margin: 5px 0 5px 0;
   }
 
+  body {
+    background-image: url();
+  }
+
   .detail-item {
     display: flex;
     justify-content: space-between;
+    color: black;
   }
 
 
