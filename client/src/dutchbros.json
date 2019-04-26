@@ -3,11 +3,12 @@
     "id": 1,
     "name": "Nutty Irish Man",
     "image": "./images/dutchnuttyirish.jpg",
-    "description": "The Nutty Irishman is pretty basic -- just a couple syrups mixed with cream and a whole can of cold brew on ice",
+    "description": "The Nutty Irishman is pretty basic -- just a couple syrups mixed with cream and a whole can of cold brew on ice.",
     "recipe": [
       "Nitro cold brew",
-      "Irish cream and hazelnut syrups",
-      "and cream."
+      "Irish cream syrup",
+      "Hazelnut syrup",
+      "Cream"
     ]
   },
 
@@ -19,8 +20,8 @@
     "recipe": [
       "Strawberry",
       "Peach",
-      "Coconut syrups",
-      "A can of Rebel energy drink over ice."
+      "Coconut syrup",
+      "A can of Rebel energy drink over ice"
     ]
   },
 
@@ -44,9 +45,9 @@
     "description": "If you’re the person who always gets stuck with fruit filled the dark chocolate candies, there’s a good chance Dutch Bros can make you something that tastes just like it!",
     "recipe": [
       "Raspberry syrup",
-      "white chocolate sauce",
+      "White chocolate sauce",
       "English toffee syrup",
-      "and milk."
+      "Milk"
     ]
   }
 ]

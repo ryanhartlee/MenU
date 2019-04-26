@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 // const db = require('./models');
 const app = express();
 
-const PORT = process.env.PORT || 3001;
+const Port = process.env.PORT || 3001;
 const passport = require("passport");
 const users = require("./routes/api/users");
 const drinks = require("./routes/api/drinks")
@@ -26,13 +26,13 @@ app.use(bodyParser.json());
 const db = require("./config/keys").mongoURI;
 
 // Connect to MongoDB
-mongoose
-  .connect(
-    db,
-    { useNewUrlParser: true }
-  )
-  .then(() => console.log("MongoDB successfully connected"))
-  .catch(err => console.log(err));
+// mongoose
+//   .connect(
+//     db,
+//     { useNewUrlParser: true }
+//   )
+//   .then(() => console.log("MongoDB successfully connected"))
+//   .catch(err => console.log(err));
 
 // Passport middleware
 app.use(passport.initialize());
@@ -41,6 +41,8 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 
 // Routes
+
+
 app.use("/api/users", users);
 app.use("/drinks", drinks);
 // app.use(routes);
@@ -61,14 +63,6 @@ var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/menudb";
 
 mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
-// ---MODELS---
-// (Require models here)
-
-// ---ROUTES---
-// Define API routes here
-
-// Send every other request to the React app
-// Define any API routes before this runs
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });

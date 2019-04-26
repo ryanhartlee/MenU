@@ -32,7 +32,7 @@ class CreateDrinkModal extends React.Component {
       restaurant: this.state.restaurant,
       description: this.state.description,
       recipe: this.state.recipe
-    })
+    }).then(res => window.location="/starbucks");
   };
 
   handleInputChange = event => {

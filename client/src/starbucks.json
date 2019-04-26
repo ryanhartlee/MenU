@@ -35,7 +35,7 @@
     "id": 4,
     "name": "Juniper Lemonade",
     "image": "./images/JuniperLemon.jpg",
-    "description": "Hint of juniper and sage, an evergreen aroma and citrus notes",
+    "description": "Hint of juniper and sage, an evergreen aroma and citrus notes.",
     "recipe": [
       "Lemonade",
       "Add juniper syrup (2 pumps tall, 3 grande, 4 venti)",
@@ -46,7 +46,7 @@
     "id": 5,
     "name": "Caramel Snickerdoodle Macchiato",
     "image": "./images/Snickerdoodle.jpg",
-    "description": "It’s sweet but not too sweet and has a delicious blend of caramel, cinnamon and a bit of vanilla",
+    "description": "It’s sweet but not too sweet and has a delicious blend of caramel, cinnamon and a bit of vanilla.",
     "recipe": [
       "Iced Soy Caramel Macchiato, upside down",
       "Add Vanilla Syrup (1 pump tall, 1.5 pumps grande, 2 pumps venti)",
