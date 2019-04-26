@@ -2,7 +2,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require("mongoose");
-// const db = require('./models');
+const db = require('./models');
 const app = express();
 const PORT = process.env.PORT || 3001;
 const passport = require("passport");
@@ -10,12 +10,8 @@ const users = require("./routes/api/users");
 const path = require("path");
 // const routes = require("./routes");
 
-// const validPassword = (userPassword, password) => {
-//   return userPassword === password;
-// }
-
-// passport pls work
 // Bodyparser middleware
+// Parses data from POST requests - allowing us to use req.body
 app.use(
   bodyParser.urlencoded({
     extended: false
@@ -24,7 +20,7 @@ app.use(
 app.use(bodyParser.json());
 
 // DB Config
-const db = require("./config/keys").mongoURI;
+// const db = require("./config/keys").mongoURI;
 
 // Connect to MongoDB
 mongoose
@@ -69,9 +65,9 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Send every other request to the React app
 // Define any API routes before this runs
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join(__dirname, "./client/build/index.html"));
-// });
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
