@@ -11,7 +11,6 @@ class Starbucks extends Component {
     state = {
         starbucks
     };
-
     render() {
         return (
             
