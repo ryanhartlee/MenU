@@ -25,7 +25,7 @@ const DutchBrosCard = props => {
           <div className="dutchbros-info">
             <div className="card-top">
               <div>
-                <span className="card-title">
+                <span className="card-title"><span><i class="material-icons right">close</i></span>
                   <span className="dutchbros-name">{props.name}</span>
                 </span>
               </div>

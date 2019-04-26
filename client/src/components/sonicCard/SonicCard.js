@@ -23,7 +23,7 @@ const SonicCard = props => {
             <div className="sonic-info">
               <div className="card-top">
                 <div>
-                  <span className="card-title">
+                  <span className="card-title"><span><i class="material-icons right">close</i></span>
                     <span className="sonic-name">{props.name}</span>
                   </span>
                 </div>
