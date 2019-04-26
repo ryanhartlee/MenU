@@ -6,6 +6,15 @@ import "./StarbucksCard.css";
 
 const StarbucksCard = props => {
   console.log(props);
+
+  
+  
+
+ 
+
+
+
+
   return (
     <Col m={6} s={12}>
       <div className="card"><style>{'.card { background: #1e3932; width:250%; height:450px;'}</style>
@@ -30,15 +39,18 @@ const StarbucksCard = props => {
                 </span>
               </div>
               <div className="reveal-details">
-                <div className="detail-item">
-                  <span>Description:</span> <span>{props.description}</span>
+                <div className="detail-item row">
+                  <span><strong>Description:</strong></span> 
+                 
+                  <span>{props.description}</span>
+                  
                 </div>
-                <div className="detail-item">
-                  <span>Recipe:</span>{" "}
+                <div className="detail-item row">
+                  <span><strong>Recipe:</strong></span>
                   <span>
                     <ul>
                       {props.recipe.map(ing => (
-                        <li>{ing}</li>
+                        <li className="list">{ing}</li>
                       ))}
                     </ul>
                   </span>
@@ -47,7 +59,8 @@ const StarbucksCard = props => {
             </div>
           </div>
         </div>
-      </div>
+        </div>
+      
    </Col>
   );
 };

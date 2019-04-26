@@ -37,13 +37,16 @@ max-width: 1250px;
     width: 100%;
 } */
 
+
+
 .activator {
     
-  height: auto;
-  max-height: 250px;
-  width: auto;
-  max-width: 250px;
-}
+        height: auto;
+        max-height: 250px;
+        width: auto;
+        max-width: 250px;
+      }
+
 
 .starbucks-info {
   display: flex !important;
@@ -84,7 +87,28 @@ max-width: 1250px;
   margin: 5px 0 5px 0;
 }
 
+body{
+
+    background-image: url()
+}
+
+.detail-item {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+
+.list {
+    list-style-type: circle !important;
+    margin-left: 20px;
+}
 .detail-item {
   display: flex;
   justify-content: space-between;
+  color: black;
+}
+
+.list {
+  list-style-type: circle !important;
+  margin-left: 20px;
 }

@@ -18,7 +18,7 @@ function SignUpForm (props, errors) {
             placeholder="username"
             error={errors.name}
             className={classnames("", {
-              invalid: errors.name
+              invalid: errors.username
             })}
           />
         </FormGroup>
@@ -63,7 +63,7 @@ function SignUpForm (props, errors) {
             type="password" 
             name="password2" 
             // Change this ID to password2?
-            id="userConfPassword" 
+            id="password2" 
             placeholder="confim password" 
             error={errors.password2}
             className={classnames("", {
