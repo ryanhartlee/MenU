@@ -6,7 +6,9 @@ function CreateDrinkForm (props) {
       <Form>
           <FormGroup>
           <Label for="restaurantSelect">Select Restaurant</Label>
-          <Input type="select" name="restauranSelect" id="restaurantSelect">
+          <Input type="select" name="restaurant" 
+          onChange={props.handleInputChange} id="restaurantSelect">
+            <option>---Choose an Option---</option>
             <option>Starbucks</option>
             <option>Dutch Bros</option>
             <option>Sonic</option>
@@ -14,18 +16,25 @@ function CreateDrinkForm (props) {
         </FormGroup>
         <FormGroup>
           <Label for="name">Name</Label>
-          <Input value={props.name} onChange={props.handleInputChange} type="name" name="name" id="drinkname" placeholder="name" />
+          <Input value={props.name} onChange={props.handleInputChange} type="name" name="name" id="drinkname" placeholder="Name" />
         </FormGroup>
         <FormGroup>
           <Label for="description">Description</Label>
-          <Input value={props.description} onChange={props.handleInputChange} type="description" name="description" id="drinkdescription" placeholder="description" />
+          <Input value={props.description} onChange={props.handleInputChange} type="description" name="description" id="drinkdescription" placeholder="Description" />
         </FormGroup>
         <FormGroup>
           <Label for="recipe">Recipe</Label>
-          <Input value={props.recipe} onChange={props.handleInputChange} type="recipe" name="recipe" id="drinkrecipe" placeholder="recipe" />
+          <Input value={props.recipe} onChange={props.handleInputChange} type="recipe" name="recipe" id="drinkrecipe" placeholder="Recipe" />
         </FormGroup>
-        <Button onClick={props.handleFormSubmit}>Submit</Button>
-      </Form>
+        <FormGroup>
+       <Label for="image">Image</Label>
+       <Input value={props.image} onChange={props.handleInputChange} type="file" name="image" id="drinkimage" placeholder="Image" />
+       <FormText color="muted">
+         Upload an image of your secret menu item.
+       </FormText>
+     </FormGroup>
+     <Button onClick={props.handleFormSubmit}>Submit</Button>
+    </Form>
     );
   }
 

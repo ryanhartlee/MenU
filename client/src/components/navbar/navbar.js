@@ -15,6 +15,7 @@ import SignInModal from '../Modals/SignInModal';
 import CreateDrinkModal from '../Modals/CreateDrinkModal';
 import logo from '../../images/MenULogo.png'
 import './navbar.css';
+import store from '../../store';
 
 export default class NavbarZ extends React.Component {
   constructor(props) {
@@ -22,9 +23,19 @@ export default class NavbarZ extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      loggedIn: false
     };
   }
+
+  componentDidMount = () => {
+    if (store.getState().auth.isAuthenticated === true) {
+      this.setState({
+        loggedIn: true
+        });
+    }
+  }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
@@ -43,10 +54,13 @@ export default class NavbarZ extends React.Component {
           </NavbarBrand>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <CreateDrinkModal />
+                {this.state.loggedIn ? <CreateDrinkModal /> : null }  
               </NavItem>
               <NavItem>
-                <NavLink href="/user">Profile</NavLink>
+               {this.state.loggedIn ? null : <SignInModal />}
+              </NavItem>
+              <NavItem>
+              {this.state.loggedIn ? <NavLink href="/user">Profile</NavLink> : null }
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
@@ -68,9 +82,7 @@ export default class NavbarZ extends React.Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
-              <NavItem>
-                <SignInModal />
-              </NavItem>
+              
             </Nav>
           </Collapse>
         </Navbar>

@@ -1,44 +1,58 @@
-import React from 'react';
-import { Card, CardImg, Row } from 'reactstrap';
-import "./StarbucksCard.css"
+import React from "react";
+import { Button, Card, Row, Col } from "react-materialize";
+import "./StarbucksCard.css";
+
 
 
 const StarbucksCard = props => {
-  console.log(props)
+  console.log(props);
   return (
+    <div>
+      <div className="card"><style>{'.card { background: #1e3932; width:250%; height:450px;'}</style>
 
-    <Card className="StarbucksCard">
-      <div className="img-container">
-        <img className="starbPic" alt={props.name} src={props.image} />
-      </div>
-      <div className="content">
-        <ul>
-          <Row>
-            <strong>Name:</strong> {props.name}
-          </Row>
-          <Row>
-            <strong>Description</strong> {props.description}
-          </Row>
+        
+        <div className="card-image waves-effect waves-block waves-light"><style>{'.card { height:400px;'}</style>
+          <img className="activator" src={props.image} alt={props.name} 
+          />
 
-          <Row>
-            <strong>Recipe</strong>
-          </Row>
-          <Row>
-
-            <ul>
-              {props.recipe.map((ing) =>
-
-                <li>
-                  {ing}
-                </li>
-
-              )}
-            </ul>
-          </Row>
-        </ul>
-      </div>
-    </Card>
-
+        </div>
+        <div className="card-content">
+          <span className="card-title activator">
+            <span className="starbucks-names"><style>{'.starbucks-names {color: white;'}</style>{props.name}</span>
+          </span>
+        </div>
+        <div className="card-reveal">
+          <div className="starbucks-info">
+            <div className="card-top">
+              <div>
+                <span className="card-title"><span><i class="material-icons right">close</i></span>
+                  <span className="starbucks-name">{props.name}</span>
+                </span>
+              </div>
+              <div className="reveal-details">
+                <div className="detail-item row">
+                  <span><strong>Description:</strong></span> 
+                 
+                  <span>{props.description}</span>
+                  
+                </div>
+                <div className="detail-item row">
+                  <span><strong>Recipe:</strong></span>
+                  <span>
+                    <ul>
+                      {props.recipe.map(ing => (
+                        <li className="list">{ing}</li>
+                      ))}
+                    </ul>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+      
 
   );
 };

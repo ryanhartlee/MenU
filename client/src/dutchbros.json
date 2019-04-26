@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "name": "Nutty Irish Man",
+    "image": "./images/dutchnuttyirish.jpg",
+    "description": "The Nutty Irishman is pretty basic -- just a couple syrups mixed with cream and a whole can of cold brew on ice.",
+    "recipe": [
+      "Nitro cold brew",
+      "Irish cream syrup",
+      "Hazelnut syrup",
+      "Cream"
+    ]
+  },
+
+  {
+    "id": 2,
+    "name": "RainBro",
+    "image": "./images/dutchrainbro.jpg",
+    "description": "Rainbro quickly emerged as an off-menu favorite that tastes a lot like something the Beach Boys would’ve sipped on by the pool in their 1988 hit “Kokomo.”",
+    "recipe": [
+      "Strawberry",
+      "Peach",
+      "Coconut syrup",
+      "A can of Rebel energy drink over ice"
+    ]
+  },
+
+  {
+    "id": 3,
+    "name": "White Coffee Cookie",
+    "image": "./images/dutchwcc.jpg",
+    "description": "Those seeking a drink that’s sweet, nutty, and balanced will love the White Coffee Cookie.",
+    "recipe": [
+      "White chocolate sauce",
+      "Chocolate macadamia nut syrup",
+      "White espresso",
+      "Breve"
+    ]
+  },
+
+  {
+    "id": 4,
+    "name": "Raspberry Truffle Mocha",
+    "image": "./images/dutchrasp.jpg",
+    "description": "If you’re the person who always gets stuck with fruit filled the dark chocolate candies, there’s a good chance Dutch Bros can make you something that tastes just like it!",
+    "recipe": [
+      "Raspberry syrup",
+      "White chocolate sauce",
+      "English toffee syrup",
+      "Milk"
+    ]
+  }
+]

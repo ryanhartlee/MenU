@@ -14,9 +14,9 @@ const listingSchema = new Schema({
     recipe: {
         type: Array,
         required: true
-    },
-    user: {
-        type: Schema.Types.ObjectId, ref: 'User'
+    // },
+    // user: {
+    //     type: Schema.Types.ObjectId, ref: 'User'
     },
     image_url: {
         type: String,
