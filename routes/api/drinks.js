@@ -15,4 +15,19 @@ router.post("/", (req, res) => {
     newDrink.save();
 })
 
+router.get("/starbucks", (req, res) => {
+//    console.log(req.body); 
+   Drink.find({restaurant:"Starbucks"}).then(drinks => res.json(drinks))
+})
+
+router.get("/dutchbros", (req, res) => {
+    //    console.log(req.body); 
+       Drink.find({restaurant:"Dutch Bros"}).then(drinks => res.json(drinks))
+    })
+
+    router.get("/sonic", (req, res) => {
+        //    console.log(req.body); 
+           Drink.find({restaurant:"Sonic"}).then(drinks => res.json(drinks))
+        })
+
 module.exports = router;
