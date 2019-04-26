@@ -9,7 +9,9 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 const passport = require("passport");
 const users = require("./routes/api/users");
+const drinks = require("./routes/api/drinks")
 const path = require("path");
+const axios = require('axios');
 
 const validPassword = (userPassword, password) => {
   return userPassword === password;
@@ -43,6 +45,7 @@ app.use(passport.initialize());
 require("./config/passport")(passport);
 // Routes
 app.use("/api/users", users);
+app.use("/drinks", drinks);
 
 mongoose.Promise = Promise;
 
@@ -59,7 +62,7 @@ mongoose.connect(MONGODB_URI, {useNewUrlParser: true});
 // Send every other request to the React app
 // Define any API routes before this runs
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "./client/build/index.html"));
+    res.sendFile(path.join(__dirname, "./client/src/index.js"));
   });
 
   app.listen(PORT, () => {

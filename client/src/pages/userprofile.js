@@ -36,21 +36,10 @@ if (localStorage.jwtToken) {
 class Home extends Component {
     constructor(props, context) {
         super(props, context);
-        // if (localStorage.jwtToken) {
-        //   // Set auth token header auth
-        //   const token = localStorage.jwtToken;
-        //   setAuthToken(token);
-        //   console.log("token is here2");
-        //   // Decode token and get user info and exp
-        //   const decoded = jwt_decode(token);
-        //   console.log(decoded);
-        //   // Set user and isAuthenticated
-        //   store.dispatch(setCurrentUser(decoded));
-        // }
-        
+
         this.state = {
             userName: store.getState().auth.user.userName,
-            userPic: 'https://pbs.twimg.com/profile_images/806269452/shrekav_400x400.png'
+            userPic: 'https://forwardsummit.ca/wp-content/uploads/2019/01/avatar-default.png'
         }
         // store.subscribe(() => {
         //   // When state will be updated(in our case, when items will be fetched), 
@@ -65,12 +54,8 @@ class Home extends Component {
     }
 
     
-    getstate = () => {
-      console.log("yooo", store.getState().auth.user.userName);
-    }
     
     render() {
-      this.getstate()
       return (
         <div>
             <NavbarZ />
