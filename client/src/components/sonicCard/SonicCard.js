@@ -9,7 +9,7 @@ const SonicCard = props => {
         <div className="card"><style>{'.card { background: #97a8d3; width:250%; height:450px;'}</style>
   
           
-          <div className="card-image waves-effect waves-block waves-light"><style>{'.card { height:400px;'}</style><i class="material-icons right"></i>
+          <div className="card-image waves-effect waves-block waves-light"><style>{'.card { height:400px;'}</style><i className="material-icons right"></i>
             <img className="activator" src={props.image} alt={props.name} 
             />
   
@@ -23,7 +23,7 @@ const SonicCard = props => {
             <div className="sonic-info">
               <div className="card-top">
                 <div>
-                  <span className="card-title"><span><i class="material-icons right">close</i></span>
+                  <span className="card-title"><span><i className="material-icons right">close</i></span>
                     <span className="sonic-name">{props.name}</span>
                   </span>
                 </div>

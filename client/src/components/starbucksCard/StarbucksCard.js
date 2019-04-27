@@ -25,7 +25,7 @@ const StarbucksCard = props => {
           <div className="starbucks-info">
             <div className="card-top">
               <div>
-                <span className="card-title"><span><i class="material-icons right">close</i></span>
+                <span className="card-title"><span><i className="material-icons right">close</i></span>
                   <span className="starbucks-name">{props.name}</span>
                 </span>
               </div>
