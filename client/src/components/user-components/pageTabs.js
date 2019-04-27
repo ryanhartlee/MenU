@@ -1,7 +1,8 @@
 import React from 'react';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import "react-tabs/style/react-tabs.css";
-import DrinkCard from '../drinkCard/drinkCard'
+import DrinkCard from '../drinkCard/drinkCard';
+import StarbucksCard from '../starbucksCard/StarbucksCard';
 
 const UserTabs = (props) => {
   return (

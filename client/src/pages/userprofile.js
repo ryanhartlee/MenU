@@ -11,6 +11,10 @@ import { setCurrentUser, logoutUser } from "../actions/authActions";
 import store from "../store";
 // import { connect } from 'react-redux';
 import axios from 'axios';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import DrinkCard from '../components/drinkCard/drinkCard'
+import StarbucksCard from '../components/starbucksCard/StarbucksCard'
+import { Col } from 'react-materialize';
 
 
 
@@ -51,7 +55,8 @@ class Home extends Component {
       axios.get("/drinks/user/" + user ).then(res => {
         console.log(res.data)
         // let drinks= res.data
-        this.setState({drinks:res.data});
+        this.setState({userCreatedDrinks: res.data});
+        console.log(this.state.userCreatedDrinks)
     });
     };
     componentDidMount() {
@@ -68,7 +73,34 @@ class Home extends Component {
                 <UserJumbotron userName={this.state.userName} userPic={this.state.userPic} />
               </div>
               <div className="container">
-              <UserTabs />
+              <Tabs>
+              <br></br>
+            <TabList>
+              <Tab>Your Created Drinks</Tab>
+              <Tab>Saved Drinks</Tab>
+            </TabList>
+
+            <TabPanel>
+              <div className="row">
+              <Col m='3'>
+            {this.state.userCreatedDrinks.map(drink => (
+              <StarbucksCard
+                  key={drink.name}
+                  id={drink.id}
+                  name={drink.name}
+                  image={"https://images.assetsdelivery.com/compings_v2/rastudio/rastudio1601/rastudio160103409.jpg"}
+                  description={drink.description}
+                  recipe={drink.recipe}
+              />
+                ))}
+              </Col>
+              </div>
+            </TabPanel>
+            <TabPanel>
+              <DrinkCard drinkName="Coming Soon" drinkInfo="Example info" drinkFlavor="Example flavors,Example flavors,Example flavors"/>
+              
+            </TabPanel>
+            </Tabs>
               </div>
         </div>
       );
