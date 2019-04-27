@@ -10,7 +10,8 @@ router.post("/", (req, res) => {
         name: req.body.name,
         restaurant: req.body.restaurant,
         description: req.body.description,
-        recipe: req.body.recipe
+        recipe: req.body.recipe,
+        user: req.body.user
     })
     newDrink.save();
 })
@@ -25,9 +26,17 @@ router.get("/dutchbros", (req, res) => {
        Drink.find({restaurant:"Dutch Bros"}).then(drinks => res.json(drinks))
     })
 
-    router.get("/sonic", (req, res) => {
-        //    console.log(req.body); 
-           Drink.find({restaurant:"Sonic"}).then(drinks => res.json(drinks))
-        })
+router.get("/sonic", (req, res) => {
+    //    console.log(req); 
+        Drink.find({restaurant:"Sonic"}).then(drinks => res.json(drinks))
+    })
+
+router.get("/user/:userName", (req, res) => {
+       console.log(req.params.userName); 
+        Drink.find({user: req.params.userName}).then(drinks => res.json(drinks))
+    })    
+
+
+
 
 module.exports = router;

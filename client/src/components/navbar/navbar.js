@@ -40,6 +40,7 @@ export default class NavbarZ extends React.Component {
       this.setState({
         loggedIn: true
         });
+      // console.log(store.getState().auth.user.userName)
     }
   }
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { Modal, ModalHeader, ModalBody, NavLink } from 'reactstrap';
 import CreateDrinkForm from '../forms/CreateDrinkForm';
 import axios from 'axios';
+import store from '../../store';
 
 class CreateDrinkModal extends React.Component {
   constructor(props) {
@@ -37,7 +38,8 @@ class CreateDrinkModal extends React.Component {
       name: this.state.name,
       restaurant: this.state.restaurant,
       description: this.state.description,
-      recipe: this.state.recipe
+      recipe: this.state.recipe,
+      user: store.getState().auth.user.userName
     }).then(window.location="/" + this.state.restaurant.replace(/ /g,''));
   };
 
