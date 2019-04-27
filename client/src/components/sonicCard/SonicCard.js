@@ -5,7 +5,7 @@ import "./SonicCard.css";
 const SonicCard = props => {
     console.log(props);
     return (
-      <Col m={6} s={12}>
+      <Col m={4} s={12}>
         <div className="card"><style>{'.card { background: #97a8d3; width:250%; height:450px;'}</style>
   
           

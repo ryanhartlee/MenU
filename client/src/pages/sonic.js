@@ -37,8 +37,9 @@ class Sonic extends Component {
                 <NavbarZ />
                 <Container>
                     <Row>
-                            {this.state.sonic.map(sonic => (
-                        <Col m='3'>
+                    <Col m='3'>
+                           {this.state.sonic.map(sonic => (
+                        
 
                                 <SonicCard
                                     key={sonic.name}
@@ -50,10 +51,10 @@ class Sonic extends Component {
                                 />
                                 
 
-                        </Col>
+                        
                             ))}
                              {this.state.drinks.map(drink => (
-                      <Col m='3'>
+                      
 
                       <SonicCard
                           key={drink.name}
@@ -64,10 +65,11 @@ class Sonic extends Component {
                           recipe={drink.recipe}
                       />
                       
-                        </Col>
+                       
              
                   ))}
-                    </Row>
+                   </Col>
+                     </Row>
                 </Container>
             </div>
             

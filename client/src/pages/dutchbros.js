@@ -38,8 +38,9 @@ class DutchBros extends Component {
                 <NavbarZ />
                 <Container>
                     <Row>
-                            {this.state.dutchbros.map(dutchbros => (
-                        <Col m='3'>
+                     <Col m='3'>
+                           {this.state.dutchbros.map(dutchbros => (
+                        
 
                                 <DutchBrosCard
                                     key={dutchbros.name}
@@ -51,10 +52,10 @@ class DutchBros extends Component {
                                 />
                                 
 
-                        </Col>
+                       
                             ))}
                             {this.state.drinks.map(drink => (
-                      <Col m='3'>
+                  
 
                       <DutchBrosCard
                           key={drink.name}
@@ -65,10 +66,11 @@ class DutchBros extends Component {
                           recipe={drink.recipe}
                       />
                       
-                        </Col>
+                       
              
                   ))}
-                    </Row>
+                </Col>   
+                  </Row>
                 </Container>
             </div>
             
