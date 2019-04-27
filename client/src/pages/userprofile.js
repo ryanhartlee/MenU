@@ -16,8 +16,6 @@ import DrinkCard from '../components/drinkCard/drinkCard'
 import StarbucksCard from '../components/starbucksCard/StarbucksCard'
 import { Col } from 'react-materialize';
 
-
-
 if (localStorage.jwtToken) {
   // Set auth token header auth
   const token = localStorage.jwtToken;
