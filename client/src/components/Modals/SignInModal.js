@@ -25,7 +25,7 @@ class SignInModal extends React.Component {
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      // this.props.history.push("/"); // push user to dashboard when they login
+      window.location="/" // push user to dashboard when they login
     }
 
     if (nextProps.errors) {
@@ -56,18 +56,22 @@ class SignInModal extends React.Component {
       password: this.state.password
     }).then(function () {
       console.log("login successfull"); 
-      console.log(store.getState());
+      // console.log(store.getState());
+      // window.location="/"
+      
     })
-    console.log(store.getState());
-    this.toggle();
+    .catch(function (err) {
+      alert("Invalid Username Or Password");
+    });
+    // console.log(store.getState());
     const userData = {
       email: this.state.email,
       password: this.state.password
     };
     this.props.loginUser(userData)
-    // .catch(function (err) {
-    //   alert("Invalid Username Or Password");
-    // });
+    // this.toggle();
+    
+    
   };
 
   render() {

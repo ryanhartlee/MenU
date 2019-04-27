@@ -6,7 +6,6 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -16,6 +15,7 @@ import CreateDrinkModal from '../Modals/CreateDrinkModal';
 import logo from '../../images/MenULogo.png'
 import './navbar.css';
 import store from '../../store';
+import { logoutUser } from "../../actions/authActions";
 
 export default class NavbarZ extends React.Component {
   constructor(props) {
@@ -27,6 +27,12 @@ export default class NavbarZ extends React.Component {
       loggedIn: false
     };
   }
+
+  onLogoutClick = e => {
+    e.preventDefault();
+    store.dispatch(logoutUser())
+    window.location="/";
+  };
 
   componentDidMount = () => {
     if (store.getState().auth.isAuthenticated === true) {
@@ -53,15 +59,6 @@ export default class NavbarZ extends React.Component {
            </div>
           </NavbarBrand>
             <Nav className="ml-auto" navbar>
-              <NavItem>
-                {this.state.loggedIn ? <CreateDrinkModal /> : null }  
-              </NavItem>
-              <NavItem>
-               {this.state.loggedIn ? null : <SignInModal />}
-              </NavItem>
-              <NavItem>
-              {this.state.loggedIn ? <NavLink href="/user">Profile</NavLink> : null }
-              </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Restaurants
@@ -82,6 +79,18 @@ export default class NavbarZ extends React.Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+              <NavItem>
+                {this.state.loggedIn ? <CreateDrinkModal /> : null }  
+              </NavItem>
+              <NavItem>
+               {this.state.loggedIn ? null : <SignInModal />}
+              </NavItem>
+              <NavItem>
+              {this.state.loggedIn ? <button className="btn" href="/user">Profile</button> : null }
+              </NavItem>
+                <NavItem>
+                {this.state.loggedIn ? <button className="btn" onClick={this.onLogoutClick}>Logout</button> : null } 
+                </NavItem>
               
             </Nav>
           </Collapse>
