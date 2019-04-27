@@ -5,9 +5,19 @@ import "./StarbucksCard.css";
 
 
 const StarbucksCard = props => {
+  console.log(props.recipe);
+
+  
+  
+
+ 
+
+
+
+
   console.log(props);
   return (
-    <div>
+    <Col m={4} s={12}>
       <div className="card"><style>{'.card { background: #1e3932; width:250%; height:450px;'}</style>
 
         
@@ -51,7 +61,7 @@ const StarbucksCard = props => {
           </div>
         </div>
         </div>
-        </div>
+        </Col>
       
 
   );

@@ -5,6 +5,8 @@
   max-width: 250px;
 }
 
+
+
 .starbucks-info {
   display: flex !important;
   flex-direction: column;
@@ -58,3 +60,13 @@ body {
   list-style-type: circle !important;
   margin-left: 20px;
 }
+
+.card{
+
+  height: auto;
+  max-height: 450px;
+  width: auto;
+  max-width: 250px;
+}
+
+

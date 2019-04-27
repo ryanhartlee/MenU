@@ -7,7 +7,7 @@ import "./DutchBrosCard.css";
 const DutchBrosCard = props => {
   console.log(props);
   return (
-    <Col m={6} s={12}>
+    <Col m={4} s={12}>
       <div className="card"><style>{'.card { background: #fefe31; width:250%; height:450px;'}</style>
 
         

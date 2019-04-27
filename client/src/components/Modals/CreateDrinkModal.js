@@ -26,7 +26,13 @@ class CreateDrinkModal extends React.Component {
   createDrink = event => {
     // console.log('yeeet', this.state);
     this.toggle();
-    console.log(this.state)
+    console.log(this.state.recipe);
+
+    let recipe = this.state.recipe.split(",")
+
+
+
+
     axios.post('/drinks', {
       name: this.state.name,
       restaurant: this.state.restaurant,

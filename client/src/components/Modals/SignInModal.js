@@ -87,6 +87,8 @@ class SignInModal extends React.Component {
   }
 }
 
+
+
 SignInModal.propTypes = {
   loginUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
