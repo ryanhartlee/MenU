@@ -6,6 +6,7 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
+  NavLink,
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
@@ -59,6 +60,12 @@ export default class NavbarZ extends React.Component {
            </div>
           </NavbarBrand>
             <Nav className="ml-auto" navbar>
+            <NavItem>
+                {this.state.loggedIn ? <CreateDrinkModal /> : null }  
+              </NavItem>
+              <NavItem>
+               {this.state.loggedIn ? null : <SignInModal />}
+              </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
                   Restaurants
@@ -80,16 +87,10 @@ export default class NavbarZ extends React.Component {
                 </DropdownMenu>
               </UncontrolledDropdown>
               <NavItem>
-                {this.state.loggedIn ? <CreateDrinkModal /> : null }  
-              </NavItem>
-              <NavItem>
-               {this.state.loggedIn ? null : <SignInModal />}
-              </NavItem>
-              <NavItem>
-              {this.state.loggedIn ? <button className="btn" href="/user">Profile</button> : null }
+              {this.state.loggedIn ? <NavLink href="/user">Profile</NavLink> : null }
               </NavItem>
                 <NavItem>
-                {this.state.loggedIn ? <button className="btn" onClick={this.onLogoutClick}>Logout</button> : null } 
+                {this.state.loggedIn ? <NavLink onClick={this.onLogoutClick}>Logout</NavLink> : null } 
                 </NavItem>
               
             </Nav>

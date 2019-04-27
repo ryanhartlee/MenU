@@ -1,7 +1,7 @@
 import React from 'react';
 // This was in the tutorial from part 1 - not sure why we didn't include it or if we need it. - BG
 import { withRouter } from "react-router-dom";
-import { Modal, ModalHeader, ModalBody } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody, NavLink } from 'reactstrap';
 import SignUpForm from '../forms/SignUpForm';
 import axios from 'axios';
 import PropTypes from "prop-types";

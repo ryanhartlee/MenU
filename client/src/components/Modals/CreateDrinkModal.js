@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, ModalHeader, ModalBody } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody, NavLink } from 'reactstrap';
 import CreateDrinkForm from '../forms/CreateDrinkForm';
 import axios from 'axios';
 
@@ -51,7 +51,7 @@ class CreateDrinkModal extends React.Component {
   render() {
     return (
       <div>
-        <button className="btn" onClick={this.toggle}>Create A Drink!</button>
+        <NavLink onClick={this.toggle}>Create A Drink!</NavLink>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Post Drink</ModalHeader>
           <ModalBody>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, NavLink } from 'reactstrap';
 import SignInForm from '../forms/SignInForm';
 import SignUpModal from './SignUpModal';
 import axios from 'axios';
@@ -77,7 +77,7 @@ class SignInModal extends React.Component {
   render() {
     return (
       <div>
-        <Button onClick={this.toggle}>Log In</Button>
+        <NavLink onClick={this.toggle}>Log In</NavLink>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className="modalz">
           <ModalHeader toggle={this.toggle}>Sign In</ModalHeader>
           <ModalBody>
