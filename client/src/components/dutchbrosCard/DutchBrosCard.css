@@ -18,7 +18,7 @@
     justify-content: space-between;
   }
   
-  .dutchbros-name {
+  .dutchbros-names {
     font-weight: 700;
   }
   
@@ -43,6 +43,10 @@
     color: black;
     text-transform: uppercase;
     margin: 5px 0 5px 0;
+  }
+
+  body {
+    background-image: url();
   }
 
   .detail-item {

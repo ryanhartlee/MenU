@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, Row, Col } from "react-materialize";
+import { Col } from "react-materialize";
 import "./DutchBrosCard.css";
 
 
@@ -11,21 +11,21 @@ const DutchBrosCard = props => {
       <div className="card"><style>{'.card { background: #fefe31; width:250%; height:450px;'}</style>
 
         
-        <div className="card-image waves-effect waves-block waves-light"><i class="material-icons right"></i>
+        <div className="card-image waves-effect waves-block waves-light"><style>{'.card { height:400px;'}</style><i className="material-icons right"></i>
           <img className="activator" src={props.image} alt={props.name} 
           />
 
         </div>
         <div className="card-content">
           <span className="card-title activator">
-            <span className="dutchbros-name">{props.name}</span>
+            <span className="dutchbros-names">{props.name}</span>
           </span>
         </div>
         <div className="card-reveal">
           <div className="dutchbros-info">
             <div className="card-top">
               <div>
-                <span className="card-title">
+                <span className="card-title"><span><i className="material-icons right">close</i></span>
                   <span className="dutchbros-name">{props.name}</span>
                 </span>
               </div>
