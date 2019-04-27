@@ -39,6 +39,7 @@ class Home extends Component {
 
         this.state = {
             userName: store.getState().auth.user.userName,
+           
             userPic: 'https://forwardsummit.ca/wp-content/uploads/2019/01/avatar-default.png'
         }
         // store.subscribe(() => {

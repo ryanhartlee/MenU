@@ -37,7 +37,10 @@ class CreateDrinkModal extends React.Component {
       name: this.state.name,
       restaurant: this.state.restaurant,
       description: this.state.description,
-      recipe: this.state.recipe
+      recipe: recipe,
+      image: this.state.image
+   
+      
     }).then(window.location="/" + this.state.restaurant.replace(/ /g,''));
   };
 
