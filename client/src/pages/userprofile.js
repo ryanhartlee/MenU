@@ -10,6 +10,7 @@ import { setCurrentUser, logoutUser } from "../actions/authActions";
 // import { Provider } from "react-redux";
 import store from "../store";
 // import { connect } from 'react-redux';
+import axios from 'axios';
 
 
 
@@ -39,20 +40,23 @@ class Home extends Component {
 
         this.state = {
             userName: store.getState().auth.user.userName,
-           
-            userPic: 'https://forwardsummit.ca/wp-content/uploads/2019/01/avatar-default.png'
+            userPic: 'https://forwardsummit.ca/wp-content/uploads/2019/01/avatar-default.png',
+            userCreatedDrinks: [],
+            userSavedDrinks: []
         }
-        // store.subscribe(() => {
-        //   // When state will be updated(in our case, when items will be fetched), 
-        //   // we will update local component state and force component to rerender 
-        //   // with new data.
-        //   // store.getState()
-    
-        //   this.setState({
-        //     userName: store.state
-        //   });
-        // });
     }
+
+    
+    getUserCreatedDrinks = (user) => {
+      axios.get("/drinks/user/" + user ).then(res => {
+        console.log(res.data)
+        // let drinks= res.data
+        this.setState({drinks:res.data});
+    });
+    };
+    componentDidMount() {
+      this.getUserCreatedDrinks(store.getState().auth.user.userName);
+    };
 
     
     

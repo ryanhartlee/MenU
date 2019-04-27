@@ -5,13 +5,14 @@ import { Container, Row, Col } from 'react-materialize';
 import SonicCard from '../components/sonicCard/SonicCard';
 import sonic from "../sonic.json";
 import axios from "axios"
+import store from '../store';
 
 
 class Sonic extends Component {
 
     state = {
-        sonic:sonic,
-        drinks: [],
+    sonic:sonic,
+    drinks: [],
     name: " ",
     description: " ",
     recipe: " ",
@@ -20,7 +21,7 @@ class Sonic extends Component {
 
     pullDrink = () => {
 
-        axios.get ("/drinks/sonic").then(res => {
+        axios.get("/drinks/sonic").then(res => {
             console.log(res.data)
             // let drinks= res.data
             this.setState({drinks:res.data});

@@ -1,7 +1,8 @@
 import React from 'react';
-import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody, NavLink } from 'reactstrap';
 import CreateDrinkForm from '../forms/CreateDrinkForm';
 import axios from 'axios';
+import store from '../../store';
 
 class CreateDrinkModal extends React.Component {
   constructor(props) {
@@ -38,9 +39,11 @@ class CreateDrinkModal extends React.Component {
       restaurant: this.state.restaurant,
       description: this.state.description,
       recipe: recipe,
-      image: this.state.image
+      image: this.state.image,
    
       
+      
+      user: store.getState().auth.user.userName
     }).then(window.location="/" + this.state.restaurant.replace(/ /g,''));
   };
 
@@ -54,7 +57,7 @@ class CreateDrinkModal extends React.Component {
   render() {
     return (
       <div>
-        <button className="btn" onClick={this.toggle}>Create A Drink!</button>
+        <NavLink onClick={this.toggle}>Create A Drink!</NavLink>
         <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
           <ModalHeader toggle={this.toggle}>Post Drink</ModalHeader>
           <ModalBody>

@@ -18,6 +18,9 @@ const drinkSchema = new Schema({
     recipe: {
         type: Array,
         required: true
+    },
+    user: {
+        type: String
     }
 });
 
