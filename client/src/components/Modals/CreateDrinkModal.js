@@ -26,13 +26,25 @@ class CreateDrinkModal extends React.Component {
 
   createDrink = event => {
     // console.log('yeeet', this.state);
+    if (this.state.restaurant === "" ) {
+      alert("Restaurant required.")
+    } 
+    else if(this.state.name === "" ) {
+      alert("Drink name required.")
+    }
+    else if (this.state.description === "" ) {
+      alert("Description required.")
+    }
+    else if (this.state.recipe.length == 0 ) {
+      alert("Recipe required.")
+    }
+    else {
+    console.log(this.state.name)
+
     this.toggle();
     console.log(this.state.recipe);
 
     let recipe = this.state.recipe.split(",")
-
-
-
 
     axios.post('/drinks', {
       name: this.state.name,
@@ -40,7 +52,9 @@ class CreateDrinkModal extends React.Component {
       description: this.state.description,
       recipe: this.state.recipe,
       user: store.getState().auth.user.userName
-    }).then(window.location="/" + this.state.restaurant.replace(/ /g,''));
+    })
+    .then(window.location="/" + this.state.restaurant.replace(/ /g,''));
+  };
   };
 
   handleInputChange = event => {

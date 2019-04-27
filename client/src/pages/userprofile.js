@@ -7,34 +7,12 @@ import '../components/user-components/userprofile.css';
 import jwt_decode from "jwt-decode";
 import setAuthToken from "../utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "../actions/authActions";
-// import { Provider } from "react-redux";
 import store from "../store";
-// import { connect } from 'react-redux';
 import axios from 'axios';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import DrinkCard from '../components/drinkCard/drinkCard'
 import StarbucksCard from '../components/starbucksCard/StarbucksCard'
 import { Col } from 'react-materialize';
-
-if (localStorage.jwtToken) {
-  // Set auth token header auth
-  const token = localStorage.jwtToken;
-  setAuthToken(token);
-  console.log("token is here2");
-  // Decode token and get user info and exp
-  const decoded = jwt_decode(token);
-  console.log(decoded);
-  // Set user and isAuthenticated
-  store.dispatch(setCurrentUser(decoded));
-// Check for expired token
-  const currentTime = Date.now() / 1000; // to get in milliseconds
-  if (decoded.exp < currentTime) {
-    // Logout user
-    store.dispatch(logoutUser());
-    // Redirect to login
-    window.location.href = "./login";
-  }
-}
 
 class Home extends Component {
     constructor(props, context) {
@@ -48,7 +26,6 @@ class Home extends Component {
         }
     }
 
-    
     getUserCreatedDrinks = (user) => {
       axios.get("/drinks/user/" + user ).then(res => {
         console.log(res.data)
@@ -61,8 +38,6 @@ class Home extends Component {
       this.getUserCreatedDrinks(store.getState().auth.user.userName);
     };
 
-    
-    
     render() {
       return (
         <div>
