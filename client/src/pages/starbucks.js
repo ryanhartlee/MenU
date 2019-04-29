@@ -8,9 +8,10 @@ import axios from "axios"
 
 
 
+
 class Starbucks extends Component {
 
-   
+    
   
 
     state = {
@@ -42,6 +43,8 @@ class Starbucks extends Component {
     componentDidMount(){this.pullDrink()}
     
     render() {
+
+       
         return (
             
             <div>
@@ -49,6 +52,8 @@ class Starbucks extends Component {
                 <Container>
                     <Row>
                    <Col m='3'>
+
+               
                    
                     {this.state.starbucks.map(starbuck => (
                     
@@ -93,5 +98,7 @@ class Starbucks extends Component {
         )
     }
 }
+
+
 
 export default Starbucks;
