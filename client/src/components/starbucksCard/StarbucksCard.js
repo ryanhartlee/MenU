@@ -1,7 +1,8 @@
 import React from "react";
 import { Col } from "react-materialize";
 import "./StarbucksCard.css";
-
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const StarbucksCard = props => {
@@ -20,7 +21,7 @@ const StarbucksCard = props => {
         </div>
         <div className="card-content">
           <span className="card-title activator">
-            <span className="starbucks-names"><style>{'.starbucks-names {color: white;'}</style>{props.name}</span>
+            <span className="starbucks-names"><i class="far fa-star"></i> <style>{'.starbucks-names {color: white;'}</style>{props.name}</span>
           </span>
         </div>
         <div className="card-reveal">
