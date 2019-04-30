@@ -61,7 +61,7 @@ class Sonic extends Component {
                           key={drink.name}
                           id={drink.id}
                           name={drink.name}
-                          image={"https://images.assetsdelivery.com/compings_v2/rastudio/rastudio1601/rastudio160103409.jpg"}
+                          image={process.env.PUBLIC_URL + drink.image}
                           description={drink.description}
                           recipe={drink.recipe}
                       />
