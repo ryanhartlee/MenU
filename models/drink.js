@@ -7,6 +7,10 @@ const drinkSchema = new Schema({
         type: String,
         required: true
     },
+    restaurant: {
+        type: String,
+        required: true
+    },
     description: {
         type: String,
         required: true
@@ -14,6 +18,12 @@ const drinkSchema = new Schema({
     recipe: {
         type: Array,
         required: true
+    },
+    user: {
+        type: String
+    },
+    image: {
+        type: String
     }
 });
 

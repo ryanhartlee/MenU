@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import './App.css';
 import Home from './pages/home';
 import Starbucks from './pages/starbucks';
 import DutchBros from './pages/dutchbros';
@@ -8,6 +7,7 @@ import Sonic from './pages/sonic';
 import UserProfile from './pages/userprofile';
 import 'materialize-css/dist/css/materialize.min.css';
 import 'materialize-css/dist/js/materialize.min.js';
+import './App.css';
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
@@ -24,7 +24,7 @@ if (localStorage.jwtToken) {
   console.log("token is here");
   // Decode token and get user info and exp
   const decoded = jwt_decode(token);
-  console.log(decoded.userName);
+  // console.log(decoded.userName);
   // Set user and isAuthenticated
   store.dispatch(setCurrentUser(decoded));
 // Check for expired token
@@ -40,7 +40,7 @@ if (localStorage.jwtToken) {
 
 class App extends Component {
   render() {
-    console.log("store" + store.getState().decoded)
+    // console.log("store" + store.getState().decoded)
     return (
       <Provider store={store}> 
       <Router>

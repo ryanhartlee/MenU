@@ -15,6 +15,8 @@ import SignInModal from '../Modals/SignInModal';
 import CreateDrinkModal from '../Modals/CreateDrinkModal';
 import logo from '../../images/MenULogo.png'
 import './navbar.css';
+import store from '../../store';
+import { logoutUser } from "../../actions/authActions";
 
 export default class NavbarZ extends React.Component {
   constructor(props) {
@@ -22,9 +24,26 @@ export default class NavbarZ extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      isOpen: false,
+      loggedIn: false
     };
   }
+
+  onLogoutClick = e => {
+    e.preventDefault();
+    store.dispatch(logoutUser())
+    window.location="/";
+  };
+
+  componentDidMount = () => {
+    if (store.getState().auth.isAuthenticated === true) {
+      this.setState({
+        loggedIn: true
+        });
+      // console.log(store.getState().auth.user.userName)
+    }
+  }
+
   toggle() {
     this.setState({
       isOpen: !this.state.isOpen
@@ -38,18 +57,15 @@ export default class NavbarZ extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
           <NavbarBrand>
            <div className="logoImage">
-           <a href="/"><img src={logo}></img></a>
+           <a href="/"><img src={logo} alt=""></img></a>
            </div>
           </NavbarBrand>
             <Nav className="ml-auto" navbar>
-              <NavItem>
-                <CreateDrinkModal />
+            <NavItem>
+                {this.state.loggedIn ? <CreateDrinkModal /> : null }  
               </NavItem>
               <NavItem>
-                <SignInModal />
-              </NavItem>
-              <NavItem>
-                <NavLink href="/user">Profile</NavLink>
+               {this.state.loggedIn ? null : <SignInModal />}
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
@@ -71,6 +87,12 @@ export default class NavbarZ extends React.Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+              <NavItem>
+              {this.state.loggedIn ? <NavLink href="/user">Profile</NavLink> : null }
+              </NavItem>
+                <NavItem>
+                {this.state.loggedIn ? <NavLink onClick={this.onLogoutClick}>Logout</NavLink> : null } 
+                </NavItem>
               
             </Nav>
           </Collapse>

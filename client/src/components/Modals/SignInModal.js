@@ -1,12 +1,11 @@
 import React from 'react';
-import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, NavLink } from 'reactstrap';
 import SignInForm from '../forms/SignInForm';
 import SignUpModal from './SignUpModal';
 import axios from 'axios';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
-import classnames from "classnames";
 import store from '../../store';
 
 class SignInModal extends React.Component {
@@ -22,9 +21,11 @@ class SignInModal extends React.Component {
     this.toggle = this.toggle.bind(this);
   }
 
+  
+
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-      // this.props.history.push("/"); // push user to dashboard when they login
+      window.location="/" // push user to dashboard when they login
     }
 
     if (nextProps.errors) {
@@ -55,25 +56,29 @@ class SignInModal extends React.Component {
       password: this.state.password
     }).then(function () {
       console.log("login successfull"); 
-      console.log(store.getState());
+      // console.log(store.getState());
+      // window.location="/"
+      
     })
-    console.log(store.getState());
-    this.toggle();
+    .catch(function (err) {
+      alert("Invalid Username Or Password");
+    });
+    // console.log(store.getState());
     const userData = {
       email: this.state.email,
       password: this.state.password
     };
     this.props.loginUser(userData)
-    // .catch(function (err) {
-    //   alert("Invalid Username Or Password");
-    // });
+    // this.toggle();
+    
+    
   };
 
   render() {
     return (
       <div>
-        <Button onClick={this.toggle}>Log In</Button>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+        <NavLink onClick={this.toggle}>Log In</NavLink>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className="modalz">
           <ModalHeader toggle={this.toggle}>Sign In</ModalHeader>
           <ModalBody>
             <SignInForm handleFormSubmit={this.loginUser} handleInputChange={this.handleInputChange} />
@@ -85,6 +90,8 @@ class SignInModal extends React.Component {
     );
   }
 }
+
+
 
 SignInModal.propTypes = {
   loginUser: PropTypes.func.isRequired,

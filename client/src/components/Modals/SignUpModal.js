@@ -1,13 +1,12 @@
 import React from 'react';
 // This was in the tutorial from part 1 - not sure why we didn't include it or if we need it. - BG
-import { Link, withRouter } from "react-router-dom";
-import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
+import { withRouter } from "react-router-dom";
+import { Modal, ModalHeader, ModalBody} from 'reactstrap';
 import SignUpForm from '../forms/SignUpForm';
 import axios from 'axios';
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { registerUser } from "../../actions/authActions";
-import classnames from "classnames";
 
 class SignUpModal extends React.Component {
   constructor(props) {
@@ -41,16 +40,17 @@ class SignUpModal extends React.Component {
   createUser = event => {
     console.log(this.state);
     if (this.state.password === this.state.password2) {
-    this.toggle();
-    axios.post('/api/users/register', {
-      userName: this.state.userName,
-      email: this.state.email,
-      password: this.state.password,
-      password2: this.state.password2
-    }).then(res => {
-      console.log(res)
-      this.props.registerUser(this.createUser, this.props.history);
+      axios.post('/api/users/register', {
+        userName: this.state.userName,
+        email: this.state.email,
+        password: this.state.password,
+        password2: this.state.password2
+      }).then(res => {
+        console.log(res)
+        this.props.registerUser(this.createUser, this.props.history);
+        this.toggle();
     })
+    .catch(err => alert("UserName or Email already in user"))
   } else {alert("Passwords must match")}
   };
 
@@ -73,7 +73,7 @@ class SignUpModal extends React.Component {
         <Modal 
           isOpen={this.state.modal} 
           toggle={this.toggle} 
-          className={this.props.className}>
+          className="modalz">
             <ModalHeader 
               toggle={this.toggle}>Sign Up
             </ModalHeader>
