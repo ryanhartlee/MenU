@@ -98,9 +98,9 @@ class CreateDrinkModal extends React.Component {
     return (
       <div>
         <NavLink onClick={this.toggle}>Create A Drink!</NavLink>
-        <Modal isOpen={this.state.modal} toggle={this.toggle} className={this.props.className}>
+        <Modal isOpen={this.state.modal} toggle={this.toggle} className="modalz">
           <ModalHeader toggle={this.toggle}>Post Drink</ModalHeader>
-          <ModalBody>
+          <ModalBody className="modalbody">
             <FormGroup>
               <Label for="image">Image</Label>
               <Input onChange={this.handleFileUpload.bind(this)} className="input-image" type="file" name="image" id="drinkimage" placeholder="Image" />

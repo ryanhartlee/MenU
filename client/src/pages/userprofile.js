@@ -4,9 +4,6 @@ import '../components/logoCard/LogoCard.css';
 import UserJumbotron from '../components/user-components/profileJumbotron';
 import UserTabs from '../components/user-components/pageTabs';
 import '../components/user-components/userprofile.css';
-import jwt_decode from "jwt-decode";
-import setAuthToken from "../utils/setAuthToken";
-import { setCurrentUser, logoutUser } from "../actions/authActions";
 import store from "../store";
 import axios from 'axios';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
@@ -42,7 +39,7 @@ class Home extends Component {
       return (
         <div>
             <NavbarZ />
-              <div className="container">
+              <div >
                 <UserJumbotron userName={this.state.userName} userPic={this.state.userPic} />
               </div>
               <div className="container">
@@ -61,7 +58,7 @@ class Home extends Component {
                   key={drink.name}
                   id={drink.id}
                   name={drink.name}
-                  image={"https://images.assetsdelivery.com/compings_v2/rastudio/rastudio1601/rastudio160103409.jpg"}
+                  image={process.env.PUBLIC_URL + drink.image}
                   description={drink.description}
                   recipe={drink.recipe}
               />
