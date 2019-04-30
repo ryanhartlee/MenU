@@ -1,27 +1,27 @@
 import React from "react";
-
-class Example extends React.Component{
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+class MysteryComponent extends React.Component {
     state = {
-        clicked: false
+      className: 'heart'
     }
-
-    handleOnCLick = () => {
-        this.setState({
-            clicked: !this.state.clicked
-        })
+  
+    toggleClass = (e) => {
+      if (this.state.className === 'heart') {
+        this.setState({ className: 'clicked' })
+      } else if (this.state.className === 'clicked') {
+        this.setState({ className: 'heart' })
+      }
     }
-
-    render(){
-
-        var clicked = this.state.clicked
-
-        return(
-        <button onClick={this.handleOnClick}>
-            <i
-                class={ clicked ? "fas fa-heart" : "fas fa-circle"}
-            />
-        </button>
-
-        )
+  
+    render() {
+      return (
+        <div className={this.state.className}>
+          <FontAwesomeIcon onClick={this.toggleClass} size={"sm"} />
+        </div>
+      )
     }
-}
+  }
+
+  export default MysteryComponent
+  
