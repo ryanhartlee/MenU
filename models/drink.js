@@ -21,6 +21,9 @@ const drinkSchema = new Schema({
     },
     user: {
         type: String
+    },
+    image: {
+        type: String
     }
 });
 
