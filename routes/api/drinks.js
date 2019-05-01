@@ -32,9 +32,15 @@ router.get("/sonic", (req, res) => {
     })
 
 router.get("/user/:userName", (req, res) => {
-       console.log(req.params.userName); 
+    //    console.log(req.params.userName); 
         Drink.find({user: req.params.userName}).then(drinks => res.json(drinks))
     })    
+
+router.delete("/:drink", (req, res) => {
+    console.log("fired")
+    Drink.remove({_id: req.params.drink})
+    .then(drinkdelete => res.json(drinkdelete));
+    })
 
 
 

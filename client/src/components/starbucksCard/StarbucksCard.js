@@ -5,7 +5,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
-const StarbucksCard = props => {
+const StarbucksCard = (props) => {
   // console.log(props.recipe);
 
   // console.log(props);
@@ -58,6 +58,7 @@ const StarbucksCard = props => {
                     </ul>
                   </span>
                 </div>
+                {props.children}
               </div>
             </div>
           </div>
