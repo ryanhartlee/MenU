@@ -4,7 +4,7 @@ import "./StarbucksCard.css";
 
 
 
-const StarbucksCard = props => {
+const StarbucksCard = (props) => {
   // console.log(props.recipe);
 
   // console.log(props);
@@ -48,6 +48,7 @@ const StarbucksCard = props => {
                     </ul>
                   </span>
                 </div>
+                {props.children}
               </div>
             </div>
           </div>
