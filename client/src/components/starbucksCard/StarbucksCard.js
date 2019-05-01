@@ -1,7 +1,8 @@
 import React from "react";
 import { Col } from "react-materialize";
 import "./StarbucksCard.css";
-
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
 const StarbucksCard = (props) => {
@@ -9,8 +10,12 @@ const StarbucksCard = (props) => {
 
   // console.log(props);
   return (
+    
     <Col m={4} s={12}>
-      <div className="card"><style>{'.card { background: #1e3932; width:250%; height:450px;'}</style>
+     
+     
+      
+      <div className="card"><style>{'.card { background: #009051; width:250%; height:450px;'}</style>
 
         
         <div className="card-image waves-effect waves-block waves-light"><style>{'.card { height:400px;'}</style>
@@ -18,10 +23,14 @@ const StarbucksCard = (props) => {
           />
 
         </div>
-        <div className="card-content">
+        <div className="card-content"><FontAwesomeIcon icon="heart" pull= "right" />
+        
           <span className="card-title activator">
-            <span className="starbucks-names"><style>{'.starbucks-names {color: white;'}</style>{props.name}</span>
+            <span className="starbucks-names"> {props.name}</span>
           </span>
+        
+          
+          
         </div>
         <div className="card-reveal">
           <div className="starbucks-info">
@@ -45,6 +54,7 @@ const StarbucksCard = (props) => {
                       {props.recipe.map(ing => (
                         <li className="list">{ing}</li>
                       ))}
+                      
                     </ul>
                   </span>
                 </div>
@@ -54,10 +64,15 @@ const StarbucksCard = (props) => {
           </div>
         </div>
         </div>
+        
         </Col>
-      
+  
 
   );
+                      
+                      
 };
+
+
 
 export default StarbucksCard;

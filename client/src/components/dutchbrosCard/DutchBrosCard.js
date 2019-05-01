@@ -18,9 +18,9 @@ const DutchBrosCard = props => {
         </div>
         <div className="card-content">
           <span className="card-title activator">
-            <span className="dutchbros-names">{props.name}</span>
+            <span className="dutchbros-names"> {props.name}</span>
           </span>
-        </div>
+        </div><i class="far fa-heart"></i>
         <div className="card-reveal">
           <div className="dutchbros-info">
             <div className="card-top">

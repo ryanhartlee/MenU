@@ -11,10 +11,14 @@ import './App.css';
 import jwt_decode from "jwt-decode";
 import setAuthToken from "./utils/setAuthToken";
 import { setCurrentUser, logoutUser } from "./actions/authActions";
-
-
 import { Provider } from "react-redux";
 import store from "./store";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faHeart } from '@fortawesome/free-solid-svg-icons'
+
+library.add(fab, faHeart)
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
