@@ -1,6 +1,9 @@
 import React from "react";
 import { Col } from "react-materialize";
 import "./SonicCard.css";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 const SonicCard = props => {
     console.log(props);
@@ -14,7 +17,7 @@ const SonicCard = props => {
             />
   
           </div>
-          <div className="card-content"><i class="far fa-heart"></i>
+          <div className="card-content"><FontAwesomeIcon icon="heart" pull= "right" />
             <span className="card-title activator">
               <span className="sonic-names">{props.name}</span>
             </span>

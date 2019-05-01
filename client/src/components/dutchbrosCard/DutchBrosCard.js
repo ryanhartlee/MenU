@@ -1,6 +1,9 @@
 import React from "react";
 import { Col } from "react-materialize";
 import "./DutchBrosCard.css";
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
 
 
 
@@ -16,11 +19,11 @@ const DutchBrosCard = props => {
           />
 
         </div>
-        <div className="card-content">
+        <div className="card-content"><FontAwesomeIcon icon="heart" pull= "right" />
           <span className="card-title activator">
             <span className="dutchbros-names"> {props.name}</span>
           </span>
-        </div><i class="far fa-heart"></i>
+        </div>
         <div className="card-reveal">
           <div className="dutchbros-info">
             <div className="card-top">
