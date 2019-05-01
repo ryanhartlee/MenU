@@ -50,7 +50,7 @@ class SignUpModal extends React.Component {
         this.props.registerUser(this.createUser, this.props.history);
         this.toggle();
     })
-    .catch(err => alert("UserName or Email already in user"))
+     .catch(err => alert("UserName or Email already in user"))
   } else {alert("Passwords must match")}
   };
 
