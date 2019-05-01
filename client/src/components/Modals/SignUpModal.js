@@ -47,7 +47,7 @@ class SignUpModal extends React.Component {
         password2: this.state.password2
       }).then(res => {
         console.log(res)
-        this.props.registerUser(this.createUser, this.props.history);
+        // this.props.registerUser(this.createUser, this.props.history);
         this.toggle();
     })
     .catch(err => alert("UserName or Email already in user"))
