@@ -29,8 +29,17 @@ class Home extends Component {
         // let drinks= res.data
         this.setState({userCreatedDrinks: res.data});
         console.log(this.state.userCreatedDrinks)
-    });
+      });
     };
+
+    deleteDrink = (drink) => {
+      
+      axios.delete("/drinks/" + drink).then(res => {
+        alert("Drink deleted")
+        window.location="/user";
+      })
+    }
+
     componentDidMount() {
       this.getUserCreatedDrinks(store.getState().auth.user.userName);
     };
@@ -61,7 +70,9 @@ class Home extends Component {
                   image={process.env.PUBLIC_URL + drink.image}
                   description={drink.description}
                   recipe={drink.recipe}
-              />
+                  >
+                <button className="btn btn-small red" onClick={() => this.deleteDrink(drink._id)}>Delete Drink </button>
+                  </StarbucksCard>
                 ))}
               </Col>
               </div>
