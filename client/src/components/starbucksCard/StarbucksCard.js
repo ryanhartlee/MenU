@@ -15,7 +15,7 @@ const StarbucksCard = props => {
      
      
       
-      <div className="card"><style>{'.card { background: #1e3932; width:250%; height:450px;'}</style>
+      <div className="card"><style>{'.card { background: #009051; width:250%; height:450px;'}</style>
 
         
         <div className="card-image waves-effect waves-block waves-light"><style>{'.card { height:400px;'}</style>
@@ -23,9 +23,10 @@ const StarbucksCard = props => {
           />
 
         </div>
-        <div className="card-content">
+        <div className="card-content"><FontAwesomeIcon icon="heart" pull= "right" />
+        
           <span className="card-title activator">
-            <span className="starbucks-names"><i class="far fa-star"></i> <style>{'.starbucks-names {color: white;'}</style>{props.name}</span>
+            <span className="starbucks-names"> {props.name}</span>
           </span>
         
           
