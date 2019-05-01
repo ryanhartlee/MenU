@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "../favorite/favorite.js";
 
 
-const StarbucksCard = props => {
+const StarbucksCard = (props) => {
   // console.log(props.recipe);
 
   // console.log(props);
@@ -50,6 +50,7 @@ const StarbucksCard = props => {
                     </ul>
                   </span>
                 </div>
+                {props.children}
               </div>
             </div>
           </div>
