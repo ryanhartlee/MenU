@@ -16,7 +16,7 @@ const SonicCard = props => {
           </div>
           <div className="card-content"><i class="far fa-heart"></i>
             <span className="card-title activator">
-              <span className="sonic-names"> {props.name}</span>
+              <span className="sonic-names">{props.name}</span>
             </span>
           </div>
           <div className="card-reveal">
