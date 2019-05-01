@@ -3,6 +3,7 @@ import { Col } from "react-materialize";
 import "./StarbucksCard.css";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import "../favorite/favorite.js";
 
 
 const StarbucksCard = props => {
@@ -11,7 +12,7 @@ const StarbucksCard = props => {
   // console.log(props);
   return (
     <Col m={4} s={12}>
-      <div className="card"><style>{'.card { background: #1e3932; width:250%; height:450px;'}</style>
+      <div className="card"><style>{'.card { background: #00a051; width:250%; height:450px;'}</style>
 
         
         <div className="card-image waves-effect waves-block waves-light"><style>{'.card { height:400px;'}</style>
@@ -19,9 +20,9 @@ const StarbucksCard = props => {
           />
 
         </div>
-        <div className="card-content">
+        <div className="card-content"><i className="far fa-heart"></i>
           <span className="card-title activator">
-            <span className="starbucks-names"><i class="far fa-star"></i> <style>{'.starbucks-names {color: white;'}</style>{props.name}</span>
+            <span className="starbucks-names"> <style>{'.starbucks-names {color: black;'}</style>{props.name}</span>
           </span>
         </div>
         <div className="card-reveal">
@@ -55,6 +56,7 @@ const StarbucksCard = props => {
         </div>
         </div>
         </Col>
+      
       
 
   );
