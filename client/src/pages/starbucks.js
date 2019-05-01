@@ -7,7 +7,12 @@ import starbucks from "../starbucks.json";
 import axios from "axios"
 
 
+
+
 class Starbucks extends Component {
+
+    
+  
 
     state = {
         starbucks:starbucks,
@@ -15,8 +20,11 @@ class Starbucks extends Component {
         name: " ",
         description: " ",
         recipe: [],
-        image: " " || "https://images.assetsdelivery.com/compings_v2/rastudio/rastudio1601/rastudio160103409.jpg"
+        image: " " || "https://images.assetsdelivery.com/compings_v2/rastudio/rastudio1601/rastudio160103409.jpg",
+        favorites: []
     };
+
+   
 
     pullDrink = () => {
     axios.get ("/drinks/starbucks").then(res => {
@@ -27,6 +35,8 @@ class Starbucks extends Component {
     componentDidMount(){this.pullDrink()}
     
     render() {
+
+       
         return (
             
             <div>
@@ -34,8 +44,12 @@ class Starbucks extends Component {
                 <Container>
                     <Row>
                    <Col m='3'>
+
+               
+                   
                     {this.state.starbucks.map(starbuck => (
                                 <StarbucksCard
+                                
                                     key={starbuck.name}
                                     id={starbuck.id}
                                     name={starbuck.name}
@@ -64,5 +78,7 @@ class Starbucks extends Component {
         )
     }
 }
+
+
 
 export default Starbucks;

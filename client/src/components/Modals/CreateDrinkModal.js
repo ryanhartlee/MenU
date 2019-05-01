@@ -78,7 +78,7 @@ class CreateDrinkModal extends React.Component {
       name: this.state.name,
       restaurant: this.state.restaurant,
       description: this.state.description,
-      recipe: this.state.recipe,
+      recipe: recipe,
       user: store.getState().auth.user.userName,
       image: this.state.imageURL
     })
