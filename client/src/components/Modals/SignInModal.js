@@ -57,7 +57,6 @@ class SignInModal extends React.Component {
     }).then(function () {
       console.log("login successfull"); 
       // console.log(store.getState());
-      // window.location="/"
       
     })
     .catch(function (err) {
