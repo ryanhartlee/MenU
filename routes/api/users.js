@@ -7,7 +7,7 @@ const keys = require("../../config/keys");
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
 // Load User model
-const user = require("../../models/user");
+const User = require("../../models/user");
 // const db = require("../../models");
 
 router.post("/register", (req, res) => {
