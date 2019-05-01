@@ -11,19 +11,20 @@ const user = require("../../models/user");
 // const db = require("../../models");
 
 router.post("/register", (req, res) => {
-    // Form validation
+    // Form validatio
     const {
         errors,
         isValid
     } = validateRegisterInput(req.body);
     // Check validation
     if (!isValid) {
-        return res.status(400).json(errors);
+        return res.status(405).json(errors);
     }
     User.findOne({
         email: req.body.email
     }).then(user => {
         if (user) {
+            console.log("here")
             return res.status(400).json({
                 email: "Email already exists"
             });
