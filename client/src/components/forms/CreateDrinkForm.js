@@ -26,14 +26,15 @@ function CreateDrinkForm (props) {
           <Label for="recipe">Recipe</Label>
           <Input value={props.recipe} onChange={props.handleInputChange} type="recipe" name="recipe" id="drinkrecipe" placeholder="Recipe" />
         </FormGroup>
-        <FormGroup>
+        {/* <FormGroup>
        <Label for="image">Image</Label>
        <Input value={props.image} onChange={props.handleInputChange} type="file" name="image" id="drinkimage" placeholder="Image" />
        <FormText color="muted">
          Upload an image of your secret menu item.
        </FormText>
-     </FormGroup>
+     </FormGroup> */}
      <Button onClick={props.handleFormSubmit}>Submit</Button>
+ 
     </Form>
     );
   }

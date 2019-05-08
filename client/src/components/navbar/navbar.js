@@ -16,6 +16,7 @@ import CreateDrinkModal from '../Modals/CreateDrinkModal';
 import logo from '../../images/MenULogo.png'
 import './navbar.css';
 import store from '../../store';
+import { logoutUser } from "../../actions/authActions";
 
 export default class NavbarZ extends React.Component {
   constructor(props) {
@@ -28,11 +29,18 @@ export default class NavbarZ extends React.Component {
     };
   }
 
+  onLogoutClick = e => {
+    e.preventDefault();
+    store.dispatch(logoutUser())
+    window.location="/";
+  };
+
   componentDidMount = () => {
     if (store.getState().auth.isAuthenticated === true) {
       this.setState({
         loggedIn: true
         });
+      // console.log(store.getState().auth.user.userName)
     }
   }
 
@@ -53,14 +61,11 @@ export default class NavbarZ extends React.Component {
            </div>
           </NavbarBrand>
             <Nav className="ml-auto" navbar>
-              <NavItem>
+            <NavItem>
                 {this.state.loggedIn ? <CreateDrinkModal /> : null }  
               </NavItem>
               <NavItem>
                {this.state.loggedIn ? null : <SignInModal />}
-              </NavItem>
-              <NavItem>
-              {this.state.loggedIn ? <NavLink href="/user">Profile</NavLink> : null }
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
@@ -82,6 +87,12 @@ export default class NavbarZ extends React.Component {
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
+              <NavItem>
+              {this.state.loggedIn ? <NavLink href="/user">Profile</NavLink> : null }
+              </NavItem>
+                <NavItem>
+                {this.state.loggedIn ? <NavLink onClick={this.onLogoutClick}>Logout</NavLink> : null } 
+                </NavItem>
               
             </Nav>
           </Collapse>

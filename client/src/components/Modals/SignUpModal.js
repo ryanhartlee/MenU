@@ -1,7 +1,7 @@
 import React from 'react';
 // This was in the tutorial from part 1 - not sure why we didn't include it or if we need it. - BG
 import { withRouter } from "react-router-dom";
-import { Modal, ModalHeader, ModalBody } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody} from 'reactstrap';
 import SignUpForm from '../forms/SignUpForm';
 import axios from 'axios';
 import PropTypes from "prop-types";
@@ -40,16 +40,17 @@ class SignUpModal extends React.Component {
   createUser = event => {
     console.log(this.state);
     if (this.state.password === this.state.password2) {
-    this.toggle();
-    axios.post('/api/users/register', {
-      userName: this.state.userName,
-      email: this.state.email,
-      password: this.state.password,
-      password2: this.state.password2
-    }).then(res => {
-      console.log(res)
-      this.props.registerUser(this.createUser, this.props.history);
+      axios.post('/api/users/register', {
+        userName: this.state.userName,
+        email: this.state.email,
+        password: this.state.password,
+        password2: this.state.password2
+      }).then(res => {
+        console.log(res)
+        this.props.registerUser(this.createUser, this.props.history);
+        this.toggle();
     })
+    .catch(err => alert("UserName or Email already in user"))
   } else {alert("Passwords must match")}
   };
 

@@ -7,7 +7,7 @@ import "./DutchBrosCard.css";
 const DutchBrosCard = props => {
   console.log(props);
   return (
-    <Col m={6} s={12}>
+    <Col m={4} s={12}>
       <div className="card"><style>{'.card { background: #fefe31; width:250%; height:450px;'}</style>
 
         
@@ -18,9 +18,9 @@ const DutchBrosCard = props => {
         </div>
         <div className="card-content">
           <span className="card-title activator">
-            <span className="dutchbros-names">{props.name}</span>
+            <span className="dutchbros-names"> {props.name}</span>
           </span>
-        </div>
+        </div><i class="far fa-heart"></i>
         <div className="card-reveal">
           <div className="dutchbros-info">
             <div className="card-top">
