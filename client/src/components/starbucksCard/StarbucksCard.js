@@ -1,5 +1,5 @@
 import React from "react";
-import { Col } from "react-materialize";
+// import { Col } from "react-materialize";
 import "./StarbucksCard.css";
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
