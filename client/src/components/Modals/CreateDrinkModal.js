@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Modal, ModalHeader, ModalBody } from 'reactstrap';
+import { Modal, ModalHeader, ModalBody } from 'reactstrap';
 import CreateDrinkForm from '../forms/CreateDrinkForm';
 import axios from 'axios';
 
